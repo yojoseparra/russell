@@ -71,7 +71,7 @@ def cosindis(tickers=('XPEL', 'SHLS'), param= 'chg', dataframe=a):
 # ------------------------------------------------------------------------------------------------------------------------
 
 # Database connection
-conn = psycopg2.connect( dbname="russell",user="jose",password="letme2G@tin",host="localhost",port="5432")
+conn = psycopg2.connect( dbname="",user="",password="",host="localhost",port="5432")
 # Query the database and load directly into a DataFrame
 a = pd.read_sql_query("SELECT a.*, text from (select * from ru.adfi where subjid in  (select distinct subjid from ru.ds) )  as a "
                       + "left join (select distinct scgrp,sctest, text from ru.sc) as b on a.fitest = b.sctest  and a.ficat=b.scgrp", conn)

@@ -7,7 +7,7 @@ import xlrd
 
 
 # prepering file for upload
-d = pandas.read_csv("C:/Users/USUARIO/projects/python/portfolio/microcap/data/b.csv", index_col=0)
+d = pandas.read_csv("data/b.csv", index_col=0)
 d = d.dropna()
 d.to_csv('data/bb.csv', index=False)
 
