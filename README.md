@@ -30,7 +30,7 @@ B. Data Download and exploration
 B.1 Data from Yahoo was download and programatically and visually analyzed. Few candidates were analyzed
 Table 1. ROE calculations and other financials in millions
 
-| subjid | fidtc      | ltd | td   | ebit   | cfo  | fcf  | capex | equity | equityc | cash | roic      |
+|<div style="width:290px">property</div>  | fidtc      | ltd | td   | ebit   | cfo  | fcf  | capex | equity | equityc | cash | roic      |
 | ------ | ---------- | --- | ---- | ------ | ---- | ---- | ----- | ------ | ------- | ---- | --------- |
 | COKE   | 12/31/2020 | 940 | 1160 | 280    | 490  | 290  | \-200 | 510    | 510     | 50   | 12.91%    |
 | COKE   | 12/31/2021 | 720 | 940  | 290    | 520  | 360  | \-160 | 710    | 710     | 140  | 14.35%    |
