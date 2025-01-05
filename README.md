@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ### Russell 2000 components: Financial analysis based on Reese Interpretation of Warren Buffett
 
+=======
+>>>>>>> b18750bc6c8f92c14b506c94d228272171abb320
 The objective of this small project is to identify the 'top' investable companies based on any theoretical concepts and the methodology explained by Reese in his book 'The Guru Investor'. Particularly, in the page 109 regarding 'The Buffett Strategy: Step by Step'
 A. Theoretic framework. 
 
@@ -21,7 +24,11 @@ A.1. Any of the Reese method based on his Buffett approach.
 
    The idea i sto use ROIC defined as NOPAT/ Invested Capital, where NOPAT = EBIT(1-Tax Rate). Invested Capital= Total Debt+Equity−Cash and Cash Equivalents
 A.2 Normalization
+<<<<<<< HEAD
 
+=======
+![image.png](attachment:image.png)
+>>>>>>> b18750bc6c8f92c14b506c94d228272171abb320
 B. Data Download and exploration
 B.1 Data from Yahoo was download and programatically and visually analyzed. Few candidates were analyzed
 Table 1. ROE calculations and other financials in millions
@@ -492,4 +499,8 @@ I use this method to choose solid companies accross the years. Here 'fistresn' a
 | COSINE | TH     | MATX    | 9/30/2024  |            |            |            | 35         | 55         | 54         | 33         | 83        |
 
 
+<<<<<<< HEAD
 C. 
+=======
+C. 
+>>>>>>> b18750bc6c8f92c14b506c94d228272171abb320
