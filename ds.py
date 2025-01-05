@@ -10,10 +10,10 @@ d = pd.read_csv("data/profile1.csv")
 from sqlalchemy import create_engine
 from urllib.parse import quote_plus
 
-username = 'jose'
-password = 'letme2G@tin'
+username = ''
+password = ''
 host = 'localhost'
-database = 'russell'
+database = ''
 
 # Escape the password
 escaped_password = quote_plus(password)
