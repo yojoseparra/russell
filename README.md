@@ -21,7 +21,7 @@ A.1. Any of the Reese method based on his Buffett approach.
 
    The idea i sto use ROIC defined as NOPAT/ Invested Capital, where NOPAT = EBIT(1-Tax Rate). Invested Capital= Total Debt+Equity−Cash and Cash Equivalents
 A.2 Normalization
-![image.png](attachment:image.png)
+
 B. Data Download and exploration
 B.1 Data from Yahoo was download and programatically and visually analyzed. Few candidates were analyzed
 Table 1. ROE calculations and other financials in millions
