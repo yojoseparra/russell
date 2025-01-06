@@ -1,4 +1,5 @@
 
+### UNDER CONSTRUCTION ...
 ### Russell 2000 components: Financial analysis based on Reese Interpretation of Warren Buffett
 
 The objective of this small project is to identify the 'top' investable companies based on any theoretical concepts and the methodology explained by Reese in his book 'The Guru Investor'. Particularly, in the page 109 regarding 'The Buffett Strategy: Step by Step'
