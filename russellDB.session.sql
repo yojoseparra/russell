@@ -42,3 +42,17 @@ WHERE subjid not in ('TH','MATX', 'HDSN','MCRI','IDCC','SHLS','MTH','KAI','FWRD'
 
 UPDATE ru.ds SET (dsterm, dsdecod) = ('SELECTED', 'SELECTED AS FINANCIALLY SOUND COMPANY')
 WHERE subjid in ('XPEL');
+
+
+------------------------------ Quarterly -----------------------------------------------------
+drop table ru.qfi;
+CREATE TABLE ru.qfi (
+    domain text,
+    ficat text,
+    subjid text,
+    fitest text,
+    fiorres double precision,    
+    fiorresu text,
+    fidtc text,
+    fiperiod text
+);
