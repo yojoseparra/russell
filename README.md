@@ -1,5 +1,4 @@
 
-### UNDER CONSTRUCTION ...
 ## Russell 2000 components: Financial analysis based on Reese Interpretation of Warren Buffett
 
 ### Project Description
