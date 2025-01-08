@@ -56,3 +56,5 @@ CREATE TABLE ru.qfi (
     fidtc text,
     fiperiod text
 );
+
+select * from ru.admo where subjid = 'MSFT'

@@ -1,74 +1,257 @@
 
 ### UNDER CONSTRUCTION ...
-### Russell 2000 components: Financial analysis based on Reese Interpretation of Warren Buffett
+## Russell 2000 components: Financial analysis based on Reese Interpretation of Warren Buffett
 
-The objective of this small project is to identify the 'top' investable companies based on any theoretical concepts and the methodology explained by Reese in his book 'The Guru Investor'. Particularly, in the page 109 regarding 'The Buffett Strategy: Step by Step'
-A. Theoretic framework. 
+### Project Description
 
-WB corresponds to the REESE method to try to look for companies based on numeric criteria in the vein of Warren Buffett investment ideas. This is an analysis of the Russell 2000 stocks from data comming from Yahoo finance.  Close to 2000 companies were screened, with yearly finanacials from 2020-2023. The full Warren Buffett investment technique is described by REESE book  The Guru Investor pag. 111
-The metodology is simple. It is of interest group companies based on financials, regardless the industry of size. In the search of a 'good' company as described by REESE we want to normalize and scale the data. To scale the data we divide by its yearly revenue. To normalize the data we use basic vector normalization.
-A.1. Any of the Reese method based on his Buffett approach.
-1. Earnings Predictability Y1 > Y2... >Yn
+The problem that we want to solve is to be able to compare the financials of two companies in the same industries or the same company across the years in an easy manner. The objective is to be able to see how the company is changing accross the years and related to the competition.
 
-   Searching in DB the candidates based on increasing yearly EPS in the last 4 years. The code to achieve thi first task is in WB.sql and WB.py. This data comes from the russell database.
-    This was done en the candidates where: 'APG', 'ATI', 'CHRD','COKE','DOC', 'ENSG','EXLS','FI', 'GTLS','MLI','ONTO','PSN', 'SFN','UFPI','SUM','SSD','WTS'.
-    While doing this analysis, I noticed there were interesting materials producer companies that had steady earnings growth with high debt level.
+This comes in handy when we have to manage a portfolio of public traded companies. Since, once evaluating a holding, we want to be aware through the changes of the company at many levels, this is nearly impossible for a regular analyst without standardizing the financial data.
 
-2. Long Term Debt < 5 earnings.
+Finnaly, we want to have a single value of comparison for companies that summarize how close is the data from one period to the next. This is important to identify simmilar companies or estable companies overtime. To do this we use the 'cosine distance' with values between -1 0 1. values close to -1 or 1 indicate high simmilarity. 
+
+### Methodology
+
+* Russell 2000 composite
+  
+   The first step was filtering companies with financials that we consider sound and stable. Based on any theoretical concepts and the methodology explained by Reese in his book 'The Guru Investor'. Particularly, in the page 109 regarding 'The Buffett Strategy: Step by Step', we find answers to what is like a sound and estable company. The REESE method to look for companies based on numeric criteria in the vein of Warren Buffett investment ideas. 
    
-   After applying the second requeriment the list was reduced further to CHRD, COKE, ENSG, EXLS, MLI, ONTO, PSN, SSD, UFPI, WTS.
-   After applying the Warren Buffet method described by Reese we endup with few, 9 companies that have positive earnings and that have reasonable debt. The code is available in WD.py and WD.sql
+   This is an analysis of the Russell 2000 stocks from data comming from Yahoo finance.  Close to 2000 companies were screened, with yearly finanacials from 2020-2023. The full Warren Buffett investment technique is described by REESE book  The Guru Investor pag. 111. The metodology is simple. It is of interest group companies based on financials, regardless the industry of size. In the search of a 'good' company as described by REESE we want to normalize and scale the data. To scale the data we divide by its yearly revenue.
+   
+   To normalize the data we use basic vector normalization to feed the data into a function that calculates the cosine distance. 
+   
+   Any of the Reese method based on his Buffett approach.
+   1. Earnings Predictability Y1 > Y2... >Yn
 
-3. Return On equity
+   Searching in DB the candidates based on increasing yearly EPS in the last 4 years. While doing this analysis, we noticed there were interesting materials producer companies that had steady earnings growth with high debt level.
 
-   The idea i sto use ROIC defined as NOPAT/ Invested Capital, where NOPAT = EBIT(1-Tax Rate). Invested Capital= Total Debt+Equity−Cash and Cash Equivalents
-A.2 Normalization
+   2. Long Term Debt < 5 earnings.
+
+   3. Return On equity
+   
+   The idea i sto use ROIC defined as NOPAT/ Invested Capital, where NOPAT = EBIT(1-Tax Rate). Invested Capital= Total Debt+Equity−Cash and Cash Equivalents.
+
+   Basic normalization and cosine formulas are available on Wikipedia.
+
+* Standard portfolio comparison. 
+  
+  After finding companies that are good in terms of the bibliography here exposed, we compare this companies with the companies in our portfolio and the 'wide MOAT' companies from Morningstar. 
 
 
-![image.png](attachment:image.png)
+#### Database
 
-B. Data Download and exploration
-B.1 Data from Yahoo was download and programatically and visually analyzed. Few candidates were analyzed
-Table 1. ROE calculations and other financials in millions
+Another objective for this programming exercise is to create a Postgres database to store our data. The objective is to apply the CDISC methodology to make the data structurally more sound. This is not easy as CDISC is deemed for clinical trials research. Nevertheless, there are more standards for that in the pharmaceutical industry than in the financial industry. Data structure and data governance is very important in the long term, the idea is to give a glimpse of that in the database. 
 
-|<div style="width:290px">property</div>  | fidtc      | ltd | td   | ebit   | cfo  | fcf  | capex | equity | equityc | cash | roic      |
-| ------ | ---------- | --- | ---- | ------ | ---- | ---- | ----- | ------ | ------- | ---- | --------- |
-| COKE   | 12/31/2020 | 940 | 1160 | 280    | 490  | 290  | \-200 | 510    | 510     | 50   | 12.91%    |
-| COKE   | 12/31/2021 | 720 | 940  | 290    | 520  | 360  | \-160 | 710    | 710     | 140  | 14.35%    |
-| COKE   | 12/31/2022 | 600 | 760  | 600    | 550  | 230  | \-330 | 1120   | 1120    | 200  | 26.90%    |
-| COKE   | 12/31/2023 | 600 | 740  | 720    | 810  | 530  | \-280 | 1440   | 1440    | 640  | 35.25%    |
-| EXLS   | 12/31/2020 | 200 | 330  | 130    | 200  | 160  | \-40  | 720    | 720     | 220  | 11.41%    |
-| EXLS   | 12/31/2021 |     | 350  | 150    | 180  | 150  | \-40  | 690    | 690     | 140  | 12.77%    |
-| EXLS   | 12/31/2022 | 220 | 310  | 200    | 170  | 120  | \-40  | 760    | 760     | 120  | 15.62%    |
-| EXLS   | 12/31/2023 | 140 | 270  | 250    | 210  | 160  | \-50  | 890    | 890     | 140  | 18.40%    |
-| MLI    | 12/31/2020 | 290 | 360  | 230    | 250  | 200  | \-40  | 780    | 780     | 120  | 16.91%    |
-| MLI    | 12/31/2021 | 0   | 20   | 650    | 310  | 280  | \-30  | 1220   | 1220    | 90   | 41.98%    |
-| MLI    | 12/31/2022 | 0   | 20   | 880    | 720  | 690  | \-40  | 1790   | 1790    | 460  | 48.58%    |
-| MLI    | 12/31/2023 | 0   | 40   | 850    | 670  | 620  | \-50  | 2340   | 2340    | 1170 | 52.81%    |
-| SSD    | 12/31/2020 |     | 50   | 250    | 210  | 170  | \-40  | 980    | 980     | 270  | 25.07%    |
-| SSD    | 12/31/2021 |     | 50   | 370    | 150  | 100  | \-50  | 1180   | 1180    | 300  | 29.68%    |
-| SSD    | 12/31/2022 | 550 | 640  | 480    | 400  | 330  | \-70  | 1410   | 1410    | 300  | 20.38%    |
-| SSD    | 12/31/2023 | 460 | 550  | 480    | 430  | 340  | \-90  | 1680   | 1680    | 430  | 19.96%    |
-| UFPI   | 12/31/2020 | 310 | 390  | 350    | 340  | 250  | \-90  | 1460   | 1460    | 440  | 18.59%    |
-| UFPI   | 12/31/2021 | 280 | 440  | 740    | 510  | 360  | \-150 | 1980   | 1980    | 290  | 26.07%    |
-| UFPI   | 12/31/2022 | 280 | 390  | 950    | 830  | 660  | \-170 | 2560   | 2560    | 560  | 29.73%    |
-| UFPI   | 12/31/2023 | 230 | 380  | 680    | 960  | 780  | \-180 | 3000   | 3000    | 1120 | 22.64%    |
-| WTS    | 12/31/2020 | 200 | 200  | 180    | 230  | 180  | \-40  | 1070   | 1070    | 220  | 12.89%    |
-| WTS    | 12/31/2021 | 140 | 140  | 240    | 180  | 150  | \-30  | 1170   | 1170    | 240  | 16.80%    |
-| WTS    | 12/31/2022 | 150 | 150  | 310    | 220  | 200  | \-30  | 1300   | 1300    | 310  | 20.74%    |
-| WTS    | 12/31/2023 | 300 | 300  | 360    | 310  | 280  | \-30  | 1510   | 1510    | 350  | 18.36%    |
+### Data Download and exploration
+
+Data was filtered based on the parameters explained in the methodology section. Data from Yahoo was download and programatically and visually analyzed. Few candidates were analyzed.
+
+Table 1. 
+| subjid_x | sctestcd                                                   | fiperiod_x_x | 9/30/2021 | 9/30/2022 | subjid_y | 6/30/2024 | 6/30/2024 |
+|----------|------------------------------------------------------------|--------------|-----------|-----------|----------|-----------|-----------|
+|          |                                                            |              | fistresn  | chg       |          | fistresn  | chg       |
+| AAPL     | Cash And Cash Equivalents                                  | 12M          | 10%       | -32%      | MSFT     | 7%        | -47%      |
+| AAPL     | Cash Equivalents                                           | 12M          | 5%        | -71%      | MSFT     | 3%        | -74%      |
+| AAPL     | Cash Financial                                             | 12M          | 5%        | 7%        | MSFT     | 5%        | 36%       |
+| AAPL     | Cash Cash Equivalents And Short Term Investments           | 12M          | 17%       | -23%      | MSFT     | 31%       | -32%      |
+| AAPL     | Commercial Paper                                           | 12M          | 2%        | 66%       |          |           |           |
+| AAPL     | Accounts Receivable                                        | 12M          | 7%        | 7%        | MSFT     | 23%       | 17%       |
+|          | Gross Accounts Receivable                                  |              |           |           | MSFT     | 24%       | 17%       |
+|          | Allowance For Doubtful Accounts Receivable                 |              |           |           | MSFT     | 0%        | 28%       |
+| AAPL     | Inventory                                                  | 12M          | 2%        | -25%      | MSFT     | 1%        | -50%      |
+|          | Raw Materials                                              |              |           |           | MSFT     | 0%        | -44%      |
+|          | Work In Process                                            |              |           |           | MSFT     | 0%        | -70%      |
+| AAPL     | Current Assets                                             | 12M          | 37%       | 0%        | MSFT     | 65%       | -13%      |
+|          | Finished Goods                                             |              |           |           | MSFT     | 0%        | -52%      |
+| AAPL     | Receivables                                                | 12M          | 14%       | 18%       | MSFT     | 23%       | 17%       |
+|          | Hedging Assets Current                                     |              |           |           | MSFT     | 0%        | 100%      |
+| AAPL     | Other Current Assets                                       | 12M          | 4%        | 50%       | MSFT     | 11%       | 19%       |
+| AAPL     | Gross PPE                                                  | 12M          | 33%       | 4%        | MSFT     | 94%       | 30%       |
+| AAPL     | Accumulated Depreciation                                   | 12M          | -19%      | 3%        | MSFT     | -31%      | 12%       |
+| AAPL     | Net PPE                                                    | 12M          | 14%       | 6%        | MSFT     | 63%       | 41%       |
+| AAPL     | Land And Improvements                                      | 12M          | 5%        | 10%       | MSFT     | 3%        | 44%       |
+|          | Buildings And Improvements                                 |              |           |           | MSFT     | 38%       | 37%       |
+| AAPL     | Machinery Furniture Equipment                              | 12M          | 22%       | 3%        | MSFT     | 41%       | 24%       |
+| AAPL     | Investments And Advances                                   | 12M          | 35%       | -6%       | MSFT     | 6%        | 48%       |
+| AAPL     | Investmentin Financial Assets                              | 12M          | 35%       | -6%       |          |           |           |
+|          | Goodwill                                                   |              |           |           | MSFT     | 49%       | 76%       |
+|          | Goodwill And Other Intangible Assets                       |              |           |           | MSFT     | 60%       | 90%       |
+|          | Other Intangible Assets                                    |              |           |           | MSFT     | 11%       | 195%      |
+| AAPL     | Leases                                                     | 12M          | 3%        | 2%        | MSFT     | 4%        | 12%       |
+| AAPL     | Other Properties                                           | 12M          | 3%        | 3%        | MSFT     | 8%        | 32%       |
+| AAPL     | Properties                                                 | 12M          | 0%        |           | MSFT     | 0%        |           |
+| AAPL     | Non Current Deferred Assets                                | 12M          |           |           |          |           |           |
+| AAPL     | Available For Sale Securities                              | 12M          | 35%       | -6%       |          |           |           |
+| AAPL     | Other Non Current Assets                                   | 12M          | 11%       | -26%      | MSFT     | 15%       | 19%       |
+| AAPL     | Other Investments                                          | 12M          | 35%       | -6%       |          |           |           |
+| AAPL     | Net Tangible Assets                                        | 12M          | 17%       | -20%      | MSFT     | 50%       | -6%       |
+| AAPL     | Other Short Term Investments                               | 12M          | 8%        | -11%      | MSFT     | 23%       | -25%      |
+| AAPL     | Total Assets                                               | 12M          | 96%       | 0%        | MSFT     | 209%      | 24%       |
+| AAPL     | Accounts Payable                                           | 12M          | 15%       | 17%       | MSFT     | 9%        | 22%       |
+| AAPL     | Payables                                                   | 12M          | 15%       | 29%       | MSFT     | 11%       | 21%       |
+| AAPL     | Payables And Accrued Expenses                              | 12M          | 15%       | 29%       | MSFT     | 11%       | 21%       |
+| AAPL     | Income Tax Payable                                         | 12M          |           |           | MSFT     | 2%        | 21%       |
+| AAPL     | Other Current Liabilities                                  | 12M          | 13%       | 15%       | MSFT     | 8%        | 30%       |
+| AAPL     | Current Liabilities                                        | 12M          | 34%       | 23%       | MSFT     | 51%       | 20%       |
+|          | Pensionand Other Post Retirement Benefit Plans Current     |              |           |           | MSFT     | 5%        | 14%       |
+| AAPL     | Current Deferred Revenue                                   | 12M          | 2%        | 4%        | MSFT     | 23%       | 13%       |
+| AAPL     | Other Current Borrowings                                   | 12M          | 3%        | 16%       |          |           |           |
+| AAPL     | Current Debt                                               | 12M          | 4%        | 35%       | MSFT     | 4%        | 70%       |
+| AAPL     | Current Debt And Capital Lease Obligation                  | 12M          | 5%        | 33%       | MSFT     | 4%        | 70%       |
+| AAPL     | Current Capital Lease Obligation                           | 12M          | 0%        | 9%        |          |           |           |
+| AAPL     | Long Term Debt                                             | 12M          | 30%       | -9%       | MSFT     | 17%       | 2%        |
+| AAPL     | Current Deferred Liabilities                               | 12M          | 2%        | 4%        | MSFT     | 23%       | 13%       |
+| AAPL     | Long Term Capital Lease Obligation                         | 12M          | 3%        | 5%        | MSFT     | 6%        | 22%       |
+| AAPL     | Long Term Debt And Capital Lease Obligation                | 12M          | 33%       | -8%       | MSFT     | 24%       | 6%        |
+|          | Long Term Equity Investment                                |              |           |           | MSFT     | 6%        | 48%       |
+|          | Non Current Deferred Liabilities                           |              |           |           | MSFT     | 2%        | 56%       |
+|          | Non Current Deferred Revenue                               |              |           |           | MSFT     | 1%        | -11%      |
+| AAPL     | Non Current Deferred Taxes Assets                          | 12M          |           |           |          |           |           |
+|          | Non Current Deferred Taxes Liabilities                     |              |           |           | MSFT     | 1%        | 505%      |
+| AAPL     | Tradeand Other Payables Non Current                        | 12M          | 7%        | -33%      | MSFT     | 11%       | 9%        |
+| AAPL     | Other Non Current Liabilities                              | 12M          | 5%        | 18%       | MSFT     | 11%       | 51%       |
+| AAPL     | Total Liabilities Net Minority Interest                    | 12M          | 79%       | 5%        | MSFT     | 99%       | 18%       |
+| AAPL     | Common Stock                                               | 12M          | 16%       | 13%       | MSFT     | 41%       | 8%        |
+| AAPL     | Common Stock Equity                                        | 12M          | 17%       | -20%      | MSFT     | 110%      | 30%       |
+| AAPL     | Capital Lease Obligations                                  | 12M          | 3%        | 5%        | MSFT     | 6%        | 22%       |
+| AAPL     | Capital Stock                                              | 12M          | 16%       | 13%       | MSFT     | 41%       | 8%        |
+| AAPL     | Retained Earnings                                          | 12M          | 2%        | -155%     | MSFT     | 71%       | 46%       |
+| AAPL     | Tangible Book Value                                        | 12M          | 17%       | -20%      | MSFT     | 50%       | -6%       |
+| AAPL     | Other Equity Adjustments                                   | 12M          | 0%        | -6915%    | MSFT     | -2%       | -12%      |
+| AAPL     | Gains Losses Not Affecting Retained Earnings               | 12M          | 0%        | -6915%    | MSFT     | -2%       | -12%      |
+| AAPL     | Treasury Shares Number                                     | 12M          |           |           |          |           |           |
+| AAPL     | Total Equity Gross Minority Interest                       | 12M          | 17%       | -20%      | MSFT     | 110%      | 30%       |
+| AAPL     | Net Debt                                                   | 12M          | 25%       | 7%        | MSFT     | 14%       | 166%      |
+| AAPL     | Total Debt                                                 | 12M          | 37%       | -3%       | MSFT     | 27%       | 12%       |
+| AAPL     | Total Capitalization                                       | 12M          | 47%       | -13%      | MSFT     | 127%      | 25%       |
+| AAPL     | Working Capital                                            | 12M          | 3%        | -299%     | MSFT     | 14%       | -57%      |
+| AAPL     | Ordinary Shares Number                                     | 12M          | 4%        | -3%       | MSFT     | 3%        | 0%        |
+| AAPL     | Stockholders Equity                                        | 12M          | 17%       | -20%      | MSFT     | 110%      | 30%       |
+| AAPL     | Share Issued                                               | 12M          | 4%        | -3%       | MSFT     | 3%        | 0%        |
+| AAPL     | Total Non Current Assets                                   | 12M          | 59%       | 1%        | MSFT     | 144%      | 55%       |
+| AAPL     | Total Non Current Liabilities Net Minority Interest        | 12M          | 44%       | -9%       | MSFT     | 48%       | 17%       |
+| AAPL     | Total Tax Payable                                          | 12M          |           |           | MSFT     | 2%        | 21%       |
+| AAPL     | Other Receivables                                          | 12M          | 7%        | 30%       |          |           |           |
+| AAPL     | Invested Capital                                           | 12M          | 51%       | -9%       | MSFT     | 131%      | 26%       |
+| AAPL     | Change In Account Payable                                  | 12M          | 3%        | -23%      | MSFT     | 1%        | -230%     |
+| AAPL     | Change In Payable                                          | 12M          | 3%        | -23%      | MSFT     | 2%        | -270%     |
+| AAPL     | Income Tax Paid Supplemental Data                          | 12M          | 7%        | -23%      |          |           |           |
+| AAPL     | Change In Payables And Accrued Expense                     | 12M          | 3%        | -23%      | MSFT     | 2%        | -270%     |
+| AAPL     | Change In Other Current Liabilities                        | 12M          | 2%        | -18%      | MSFT     | 2%        | 99%       |
+| AAPL     | Change In Other Working Capital                            | 12M          | 0%        | -71%      | MSFT     | 2%        | -3%       |
+| AAPL     | Change In Inventory                                        | 12M          | -1%       | -156%     | MSFT     | 1%        | 3%        |
+| AAPL     | Change In Receivables                                      | 12M          | -4%       | -33%      | MSFT     | -3%       | 76%       |
+|          | Change In Tax Payable                                      |              |           |           | MSFT     | 1%        | -571%     |
+| AAPL     | Change In Working Capital                                  | 12M          | -1%       | -124%     | MSFT     | 1%        | -176%     |
+|          | Change In Income Tax Payable                               |              |           |           | MSFT     | 1%        | -571%     |
+| AAPL     | Deferred Income Tax                                        | 12M          | -1%       | -119%     | MSFT     | -2%       | -22%      |
+| AAPL     | Deferred Tax                                               | 12M          | -1%       | -119%     | MSFT     | -2%       | -22%      |
+| AAPL     | Changes In Account Receivables                             | 12M          | -3%       | -82%      | MSFT     | -3%       | 76%       |
+| AAPL     | Change In Other Current Assets                             | 12M          | -2%       | -19%      | MSFT     | -3%       | 75%       |
+|          | Depreciation                                               |              |           |           | MSFT     | 9%        | 61%       |
+| AAPL     | Depreciation Amortization Depletion                        | 12M          | 3%        | -2%       | MSFT     | 9%        | 61%       |
+| AAPL     | Depreciation And Amortization                              | 12M          | 3%        | -2%       | MSFT     | 9%        | 61%       |
+| AAPL     | Stock Based Compensation                                   | 12M          | 2%        | 14%       | MSFT     | 4%        | 12%       |
+| AAPL     | Interest Paid Supplemental Data                            | 12M          | 1%        | 7%        |          |           |           |
+|          | Gain Loss On Investment Securities                         |              |           |           | MSFT     |           |           |
+|          | Operating Gains Losses                                     |              |           |           | MSFT     | 0%        | 56%       |
+| AAPL     | Other Non Cash Items                                       | 12M          | -1%       | -120%     |          |           |           |
+| AAPL     | Operating Cash Flow                                        | 12M          | 28%       | 17%       | MSFT     | 48%       | 35%       |
+| AAPL     | Cash Flow From Continuing Operating Activities             | 12M          | 28%       | 17%       | MSFT     | 48%       | 35%       |
+| AAPL     | Sale Of Investment                                         | 12M          | 29%       | -37%      | MSFT     | 15%       | -25%      |
+| AAPL     | Purchase Of Business                                       | 12M          | 0%        | 827%      | MSFT     | -28%      | 4040%     |
+| AAPL     | Purchase Of PPE                                            | 12M          | -3%       | -3%       | MSFT     | -18%      | 58%       |
+| AAPL     | Purchase Of Investment                                     | 12M          | -30%      | -30%      | MSFT     | -7%       | -53%      |
+| AAPL     | Net PPEPurchase And Sale                                   | 12M          | -3%       | -3%       | MSFT     | -18%      | 58%       |
+| AAPL     | Net Business Purchase And Sale                             | 12M          | 0%        | 827%      | MSFT     | -28%      | 4040%     |
+| AAPL     | Net Income                                                 | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Net Income From Continuing Operations                      | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Net Investment Purchase And Sale                           | 12M          | -1%       | 211%      | MSFT     | 7%        | 76%       |
+| AAPL     | Cash Flow From Continuing Investing Activities             | 12M          | -4%       | 54%       | MSFT     | -40%      | 328%      |
+| AAPL     | Investing Cash Flow                                        | 12M          | -4%       | 54%       | MSFT     | -40%      | 328%      |
+| AAPL     | Issuance Of Debt                                           | 12M          | 6%        | -73%      | MSFT     | 12%       | inf%      |
+| AAPL     | Long Term Debt Issuance                                    | 12M          | 6%        | -73%      | MSFT     | 10%       | inf%      |
+|          | Short Term Debt Issuance                                   |              |           |           | MSFT     | 2%        | inf%      |
+| AAPL     | Net Short Term Debt Issuance                               | 12M          | 0%        | 287%      | MSFT     | 2%        | inf%      |
+| AAPL     | Net Long Term Debt Issuance                                | 12M          | 3%        | -135%     | MSFT     | -2%       | 70%       |
+| AAPL     | Issuance Of Capital Stock                                  | 12M          | 0%        |           | MSFT     | 1%        | 7%        |
+| AAPL     | Common Stock Issuance                                      | 12M          | 0%        |           | MSFT     | 1%        | 7%        |
+| AAPL     | Repayment Of Debt                                          | 12M          | -2%       | 9%        | MSFT     | -12%      | 957%      |
+| AAPL     | Long Term Debt Payments                                    | 12M          | -2%       | 9%        | MSFT     | -12%      | 957%      |
+| AAPL     | Net Issuance Payments Of Debt                              | 12M          | 3%        | -101%     | MSFT     | 0%        | -121%     |
+| AAPL     | Common Stock Payments                                      | 12M          | -24%      | 4%        | MSFT     | -7%       | -22%      |
+| AAPL     | Cash Dividends Paid                                        | 12M          | -4%       | 3%        | MSFT     | -9%       | 10%       |
+| AAPL     | Capital Expenditure                                        | 12M          | -3%       | -3%       | MSFT     | -18%      | 58%       |
+| AAPL     | Repurchase Of Capital Stock                                | 12M          | -24%      | 4%        | MSFT     | -7%       | -22%      |
+| AAPL     | Net Common Stock Issuance                                  | 12M          | -24%      | 4%        | MSFT     | -6%       | -25%      |
+| AAPL     | Net Other Financing Charges                                | 12M          | -2%       | 14%       | MSFT     | -1%       | 30%       |
+| AAPL     | Financing Cash Flow                                        | 12M          | -26%      | 19%       | MSFT     | -15%      | -14%      |
+| AAPL     | Cash Flow From Continuing Financing Activities             | 12M          | -26%      | 19%       | MSFT     | -15%      | -14%      |
+| AAPL     | Beginning Cash Position                                    | 12M          | 11%       | -10%      | MSFT     | 14%       | 149%      |
+| AAPL     | Net Other Investing Changes                                | 12M          | 0%        | 442%      | MSFT     | -1%       | -58%      |
+| AAPL     | End Cash Position                                          | 12M          | 10%       | -30%      | MSFT     | 7%        | -47%      |
+| AAPL     | Changes In Cash                                            | 12M          | -1%       | 184%      | MSFT     | -7%       | -177%     |
+| AAPL     | Change In Cash Supplemental As Reported                    | 12M          | -1%       | 184%      | MSFT     | -7%       | -179%     |
+|          | Effect Of Exchange Rate Changes                            |              |           |           | MSFT     | 0%        | 8%        |
+| AAPL     | Free Cash Flow                                             | 12M          | 25%       | 20%       | MSFT     | 30%       | 25%       |
+| AAPL     | Other Non Cash Items                                       | 12M          | -1%       | -120%     |          |           |           |
+| AAPL     | Common Stock Dividend Paid                                 | 12M          | -4%       | 3%        | MSFT     | -9%       | 10%       |
+| AAPL     | Total Revenue                                              | 12M          | 100%      | 8%        | MSFT     | 100%      | 16%       |
+| AAPL     | Operating Revenue                                          | 12M          | 100%      | 8%        | MSFT     | 100%      | 16%       |
+| AAPL     | Cost Of Revenue                                            | 12M          | 58%       | 5%        | MSFT     | 30%       | 13%       |
+| AAPL     | Reconciled Cost Of Revenue                                 | 12M          | 58%       | 5%        | MSFT     | 30%       | 13%       |
+| AAPL     | Gross Profit                                               | 12M          | 42%       | 12%       | MSFT     | 70%       | 17%       |
+| AAPL     | Research And Development                                   | 12M          | 6%        | 20%       | MSFT     | 12%       | 9%        |
+|          | Selling And Marketing Expense                              |              |           |           | MSFT     | 10%       | 7%        |
+| AAPL     | Selling General And Administration                         | 12M          | 6%        | 14%       | MSFT     | 13%       | 6%        |
+|          | General And Administrative Expense                         |              |           |           | MSFT     | 3%        | 0%        |
+| AAPL     | Reconciled Depreciation                                    | 12M          | 3%        | -2%       | MSFT     | 9%        | 61%       |
+| AAPL     | Operating Expense                                          | 12M          | 12%       | 17%       | MSFT     | 25%       | 7%        |
+| AAPL     | EBIT                                                       | 12M          | 31%       | 7%        | MSFT     | 45%       | 21%       |
+| AAPL     | Operating Income                                           | 12M          | 30%       | 10%       | MSFT     | 45%       | 24%       |
+| AAPL     | Interest Income                                            | 12M          | 1%        | -1%       | MSFT     | 1%        | 5%        |
+| AAPL     | Interest Income Non Operating                              | 12M          | 1%        | -1%       | MSFT     | 1%        | 5%        |
+| AAPL     | Interest Expense                                           | 12M          | 1%        | 11%       | MSFT     | 1%        | 49%       |
+| AAPL     | Interest Expense Non Operating                             | 12M          | 1%        | 11%       | MSFT     | 1%        | 49%       |
+| AAPL     | Net Interest Income                                        | 12M          | 0%        | -154%     | MSFT     | 0%        | -78%      |
+| AAPL     | Net Non Operating Interest Income Expense                  | 12M          | 0%        | -154%     | MSFT     | 0%        | -78%      |
+| AAPL     | Other Income Expense                                       | 12M          | 0%        | -657%     | MSFT     | -1%       | 685%      |
+| AAPL     | Other Non Operating Income Expenses                        | 12M          | 0%        | -657%     | MSFT     | -1%       | 491%      |
+|          | Gain On Sale Of Security                                   |              |           |           | MSFT     | 0%        | -2387%    |
+| AAPL     | Pretax Income                                              | 12M          | 30%       | 9%        | MSFT     | 44%       | 21%       |
+| AAPL     | Tax Provision                                              | 12M          | 4%        | 33%       | MSFT     | 8%        | 16%       |
+| AAPL     | Tax Effect Of Unusual Items                                | 12M          | 0%        |           | MSFT     | 0%        | 3406%     |
+| AAPL     | Tax Rate For Calcs                                         | 12M          | 0%        | 22%       | MSFT     | 0%        | -4%       |
+| AAPL     | Net Income                                                 | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Net Income Common Stockholders                             | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Net Income Continuous Operations                           | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Net Income From Continuing And Discontinued Operation      | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Net Income From Continuing Operation Net Minority Interest | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Net Income Including Noncontrolling Interests              | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Normalized Income                                          | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Diluted NIAvailto Com Stockholders                         | 12M          | 26%       | 5%        | MSFT     | 36%       | 22%       |
+| AAPL     | Basic EPS                                                  | 12M          | 0%        | 8%        | MSFT     | 0%        | 22%       |
+| AAPL     | Diluted EPS                                                | 12M          | 0%        | 9%        | MSFT     | 0%        | 22%       |
+| AAPL     | Basic Average Shares                                       | 12M          | 5%        | -3%       | MSFT     | 3%        | 0%        |
+| AAPL     | Diluted Average Shares                                     | 12M          | 5%        | -3%       | MSFT     | 3%        | 0%        |
+| AAPL     | EBITDA                                                     | 12M          | 34%       | 6%        | MSFT     | 54%       | 27%       |
+| AAPL     | Normalized EBITDA                                          | 12M          | 34%       | 6%        | MSFT     | 54%       | 27%       |
+| AAPL     | Total Expenses                                             | 12M          | 70%       | 7%        | MSFT     | 55%       | 10%       |
+| AAPL     | Total Operating Income As Reported                         | 12M          | 30%       | 10%       | MSFT     | 45%       | 24%       |
+|          | Special Income Charges                                     |              |           |           | MSFT     | 0%        | 587%      |
+|          | Write Off                                                  |              |           |           | MSFT     | 0%        | 587%      |
+|          | Total Unusual Items                                        |              |           |           | MSFT     | 0%        | 3560%     |
+|          | Total Unusual Items Excluding Goodwill                     |              |           |           | MSFT     | 0%        | 3560%     |
+|          | Other Gand A                                               |              |           |           | MSFT     | 3%        | 0%        |
 
 
 Using a Basic research method based on Reese approach to Warren Buffett way of investing, we came accross with Coca-Cola (COKE) thus, the method might be interesting indeed. We came accross with CHRD which is a company in the oil industry. Buffett has companies in this sector. Notice that the method requires 10Y statement analysis, here we consider only 4Y and yet, from about 2000 companies, we get less than 10 that fullfill this basic criteria. Notice COKE dropped from the Russell 2000 index in 2024, but it was up to 2023.
 
-
-
-
-
 There are other requirements with many projections like free cash flow and stock price and return on investment in the comming 10 years. Thinking this is Buffett method is controversial. Therefore, we stop here. We just want to identify a bunch of good companies based in these basic numbers. This is wider accepted, i.e. a company with low debt, with hight ROE, and with strong margins and low capital expenditure is a good company. Other aspects are less numerical, like re-investment oportunities or protective moat. This wont be quantified.
 
-Based on a group of companies like these ones we will ask to ChatGPT to give us a list of companies simmilar in these metrics, after this we make a list of these companies to be notified when they get cheap. Additionally, new investment desicion will be compared against with these companies to draw conclusions about valuations. A new entrant in the portfolio should offer a higher potential reward than the ones already in the portfolio. 
-The first problem with asking ChatGPT to look for companies similar to the list hereup, is that the search will result in companies in the same sector, same size and so forth, whereas, we look for good companies not matter the sector or the size. Notice additionally, that we rely on yahoo, as it provide us with already standardize data, but we need at least 10 years of financials, or we may be interested in small or unknown companies requiring finacial standardization, just to be able to fee the data into the model.
+Notice additionally, that we rely on yahoo, as it provide us with already standardize data, but we need at least 10 years of financials, or we may be interested in small or unknown companies requiring finacial standardization, just to be able to fee the data into the model.
+
+
 
 One approach to make companies more comparable is to present all financial data in terms of the percentage respect to the total revenue. This way we center all data arround 1. This way te embeddings will be more comparable accross companies. 
 The following is the SQL query. EBIT > 30% and Total debt less than 3X its revenue. These requirements are 'at least once' or at least in one of the years analyzed.
