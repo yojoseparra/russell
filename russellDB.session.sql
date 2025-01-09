@@ -58,3 +58,7 @@ CREATE TABLE ru.qfi (
 );
 
 select * from ru.admo where subjid = 'MSFT'
+
+select * from ru.cd where aval > 0.95 or aval < -0.95
+
+select distinct subjid from ru.cd

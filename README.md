@@ -47,7 +47,8 @@ Another objective for this programming exercise is to create a Postgres database
 
 Data was filtered based on the parameters explained in the methodology section. Data from Yahoo was download and programatically and visually analyzed. Few candidates were analyzed. Additionally, these few candidate companies were compared with wide MOAT companies that have strong financials. Hereunder there is an expample of high quality companies side by side.
 
-Table 1. Table of standardized yearly data between AAPL and MSFT
+Table 1. Table of standardized yearly data between AAPL and MSFT, Two Wide MOAT companies
+
 | subjid_x | sctestcd                                                   | 9/30/2021 | 9/30/2022 | 9/30/2022 | subjid_y | 6/30/2024 | 6/30/2021 | 6/30/2024 |
 |----------|------------------------------------------------------------|-----------|-----------|-----------|----------|-----------|-----------|-----------|
 |          |                                                            | fistresn  | fistresn  | chg       |          | fistresn  | fistresn  | chg       |
@@ -261,7 +262,7 @@ The idea is thus to use this and selected companies to define what is a healthy 
 ### Cosine Distance calculations
 
 
-Table 2. Consine distance calculations between companies. Units ranging from -100 to +100
+Table 2. Consine distance calculations between pairs of companies. Units ranging from -100 to +100
 | param  |        |         |            | CHG        | CHG        | CHG        | FISTRESN   | FISTRESN   | FISTRESN   | FISTRESN   | FISTRESN  |
 |--------|--------|---------|------------|------------|------------|------------|------------|------------|------------|------------|-----------|
 | afidtc |        |         |            | 12/31/2021 | 12/31/2022 | 12/31/2023 | 12/31/2020 | 12/31/2021 | 12/31/2022 | 12/31/2023 | 9/30/2024 |

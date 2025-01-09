@@ -17,6 +17,7 @@ import pandas as pd
 a['period'] = pd.to_datetime(a['fidtc'], format="%Y-%m-%d").dt.date
 
 def long2wide_fistresn_wide(tickers=[ 'AMZN', 'BABA'], dataframe=a):
+    pd.options.mode.chained_assignment = None  # Turn off the warning
     # the following displays the ticker data wide accross years
     # This code works with 2 tickers
     b=dataframe[dataframe.subjid.isin(tickers)].copy()
@@ -52,31 +53,58 @@ def long2wide_fistresn_wide(tickers=[ 'AMZN', 'BABA'], dataframe=a):
     da_latest = da[da['fiperiod'] == 'TTM']
     da_latest = da_latest.dropna(axis=1, thresh=threshold)
     da = da[da['fiperiod'] != 'TTM']
-    da = da.merge(da_latest, on= ['subjid','ficat','scgrpid', 'sctestcd'], how='left' )
+    numeric_columns_a = da_latest.select_dtypes(include='number') # sometimes Da_latest do not have data one numeric column is scgrpid
+
+    if (  len(numeric_columns_a.columns) > 1 ):
+        da = da.merge(da_latest, on= ['subjid','ficat','scgrpid', 'sctestcd'], how='left' )
 
     db = d[d['subjid'] == tickers[1]]
     db = db.dropna(axis=1, thresh=threshold)
     db_latest = db[db['fiperiod'] == 'TTM']
     db_latest = db_latest.dropna(axis=1, thresh=threshold)
     db = db[db['fiperiod'] != 'TTM']
-    db = db.merge(db_latest, on= ['subjid','ficat','scgrpid', 'sctestcd'], how='left' )
+    numeric_columns_b = db_latest.select_dtypes(include='number') # sometimes Db_latest do not have data, meaning TTM does not have financial data
+
+
+    if ( len(numeric_columns_b.columns) > 1 ):
+        db = db.merge(db_latest, on= ['subjid','ficat','scgrpid', 'sctestcd'], how='left' )
 
     e = da.merge(db, on= ['ficat','scgrpid', 'sctestcd'], how='outer' )
     #e.columns = e.columns.set_levels([level.str.replace('-12-31', '', regex=False) if level.dtype == 'object' else level for level in e.columns.levels])
     return e
     
-tickers = [ 'AAPL', 'MSFT']
-import os
-os.system('cls')
-e = long2wide_fistresn_wide(tickers=tickers)
-# ------------------------------------------------- Presenting data in console as percentages ----------------------------
-# Transform all numeric columns to percentages
-numeric_cols = e.select_dtypes(include='number').columns
-e[numeric_cols] = e[numeric_cols] * 100
-# Optional: Format as strings with '%' sign
-e[numeric_cols] = e[numeric_cols].applymap(lambda x: f"{x:.0f}%")
-print(e)
-e.to_csv( 'data/'+tickers[0] + '_' + tickers[1] +'.csv', index=False )
+# creating a list to iterate the tickers
+from itertools import combinations
+subjid = a['subjid'].unique()
+pairs = list(combinations(subjid, 2))
+# Convert tuples to lists
+pairs = [list(tup) for tup in pairs]
+
+# Convert to strings with a percentage sign
+processing = [ round((i + 1) / len(pairs) * 100) for i in range(len(pairs))]
+percentages = [f"{p}%" for p in processing]
+pairs = list(combinations(subjid, 2))
+processing = dict(zip(pairs, percentages))
+
+import numpy as np
+for tickers in pairs:
+    pd.options.mode.chained_assignment = None  # Turn off the warning
+    print(tickers)
+    print(processing[tickers])
+    e = long2wide_fistresn_wide(tickers=tickers)
+    #tickers = pairs[2]
+    # ------------------------------------------------- Presenting data in console as percentages ----------------------------
+    # ------------------------------------------------------------------------------------------------------------------------
+    # Transform all numeric columns to percentages
+    numeric_cols = e.select_dtypes(include='number').columns
+    e[numeric_cols] = e[numeric_cols] * 100
+    # Optional: Format as strings with '%' sign
+    #e[numeric_cols] = e[numeric_cols].applymap(lambda x: f"{x:.0f}%")
+    e[numeric_cols] = e[numeric_cols].applymap(lambda x: f"{x:.0f}%" if not pd.isna(x) else np.nan)
+    e.to_csv( 'data/'+tickers[0] + '_' + tickers[1] +'.csv', index=False )
+
+
+# ------------------------------------------------------------------------------------------------------------------------
 # ------------------------------------------------- Presenting the profile of the company --------------------------------
 dir = 'data/' + '_'.join(tickers) + '.csv'
 #e.to_csv(dir)
