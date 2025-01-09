@@ -1,0 +1,203 @@
+subjid_x,ficat,,sctestcd,fiperiod_x_x,7/31/2021,7/31/2022,7/31/2023,7/31/2024,2024-10-31_x,fiperiod_y_x,2024-10-31_y,subjid_y,fiperiod_x_y,6/30/2021,6/30/2022,6/30/2023,6/30/2024,2024-09-30_x,6/30/2022,6/30/2023,6/30/2024,fiperiod_y_y,2024-09-30_y
+,,,,,fistresn,fistresn,fistresn,fistresn,fistresn,,fistresn,,,fistresn,fistresn,fistresn,fistresn,fistresn,chg,chg,chg,,fistresn
+CSCO,BALANCE SHEET,,Cash And Cash Equivalents,12M,18%,14%,18%,14%,,,,MSFT,12M,8%,7%,16%,7%,,-2%,149%,-47%,,
+,BALANCE SHEET,,Cash Equivalents,,,,,,,,,MSFT,12M,4%,3%,12%,3%,,-18%,362%,-74%,,
+,BALANCE SHEET,,Cash Financial,,,,,,,,,MSFT,12M,4%,4%,4%,5%,,14%,3%,36%,,
+CSCO,BALANCE SHEET,,Cash Cash Equivalents And Short Term Investments,12M,49%,37%,46%,33%,,,,MSFT,12M,77%,53%,53%,31%,,-20%,6%,-32%,,
+CSCO,BALANCE SHEET,,Commercial Paper,12M,0%,1%,0%,20%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Accounts Receivable,12M,12%,13%,10%,12%,,,,MSFT,12M,23%,22%,23%,23%,,16%,10%,17%,,
+CSCO,BALANCE SHEET,,Gross Accounts Receivable,12M,12%,13%,10%,13%,,,,MSFT,12M,23%,23%,23%,24%,,16%,10%,17%,,
+CSCO,BALANCE SHEET,,Allowance For Doubtful Accounts Receivable,12M,0%,0%,0%,0%,,,,MSFT,12M,0%,0%,0%,0%,,-16%,3%,28%,,
+CSCO,BALANCE SHEET,,Inventory,12M,3%,5%,6%,6%,,,,MSFT,12M,2%,2%,1%,1%,,42%,-33%,-50%,,
+CSCO,BALANCE SHEET,,Raw Materials,12M,2%,3%,3%,4%,,,,MSFT,12M,1%,1%,0%,0%,,-4%,-38%,-44%,,
+CSCO,BALANCE SHEET,,Work In Process,12M,0%,0%,0%,0%,,,,MSFT,12M,0%,0%,0%,0%,,4%,-72%,-70%,,
+CSCO,BALANCE SHEET,,Current Assets,12M,79%,71%,76%,69%,,,,MSFT,12M,110%,86%,87%,65%,,-8%,9%,-13%,,
+CSCO,BALANCE SHEET,,Finished Goods,12M,1%,1%,3%,2%,,,,MSFT,12M,1%,1%,1%,0%,,84%,-30%,-52%,,
+CSCO,BALANCE SHEET,,Receivables,12M,20%,20%,16%,19%,,,,MSFT,12M,23%,22%,23%,23%,,16%,10%,17%,,
+CSCO,BALANCE SHEET,,Other Inventories,12M,0%,0%,0%,0%,,,,,,,,,,,,,,,
+,BALANCE SHEET,,Hedging Assets Current,,,,,,,,,MSFT,12M,0%,0%,0%,0%,,-90%,-25%,100%,,
+CSCO,BALANCE SHEET,,Other Current Assets,12M,6%,8%,8%,10%,,,,MSFT,12M,8%,9%,10%,11%,,26%,29%,19%,,
+CSCO,BALANCE SHEET,,Gross PPE,12M,22%,20%,18%,18%,,,,MSFT,12M,73%,74%,84%,94%,,21%,21%,30%,,
+CSCO,BALANCE SHEET,,Accumulated Depreciation,12M,-17%,-16%,-14%,-14%,,,,MSFT,12M,-31%,-30%,-32%,-31%,,16%,14%,12%,,
+CSCO,BALANCE SHEET,,Net PPE,12M,5%,4%,4%,4%,,,,MSFT,12M,42%,44%,52%,63%,,24%,26%,41%,,
+,BALANCE SHEET,,Land And Improvements,,,,,,,,,MSFT,12M,2%,2%,3%,3%,,29%,20%,44%,,
+,BALANCE SHEET,,Buildings And Improvements,,,,,,,,,MSFT,12M,26%,28%,32%,38%,,25%,24%,37%,,
+CSCO,BALANCE SHEET,,Machinery Furniture Equipment,12M,2%,2%,10%,10%,,,,MSFT,12M,34%,34%,38%,41%,,17%,22%,24%,,
+,BALANCE SHEET,,Investments And Advances,,,,,,,,,MSFT,12M,4%,3%,5%,6%,,15%,43%,48%,,
+CSCO,BALANCE SHEET,,Goodwill,12M,77%,74%,68%,109%,,,,MSFT,12M,30%,34%,32%,49%,,36%,1%,76%,,
+CSCO,BALANCE SHEET,,Goodwill And Other Intangible Assets,12M,84%,79%,71%,130%,,,,MSFT,12M,34%,40%,36%,60%,,37%,-2%,90%,,
+CSCO,BALANCE SHEET,,Other Intangible Assets,12M,7%,5%,3%,21%,,,,MSFT,12M,5%,6%,4%,11%,,45%,-17%,195%,,
+,BALANCE SHEET,,Leases,,,,,,,,,MSFT,12M,4%,4%,4%,4%,,14%,9%,12%,,
+CSCO,BALANCE SHEET,,Other Properties,12M,11%,9%,0%,0%,,,,MSFT,12M,7%,7%,7%,8%,,19%,9%,32%,,
+CSCO,BALANCE SHEET,,Non Current Accounts Receivable,12M,4%,8%,1%,1%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Properties,12M,9%,8%,7%,8%,,,,MSFT,12M,0%,0%,0%,0%,,,,,,
+CSCO,BALANCE SHEET,,Non Current Deferred Assets,12M,9%,9%,12%,12%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Other Non Current Assets,12M,10%,12%,11%,11%,,,,MSFT,12M,9%,11%,14%,15%,,45%,40%,19%,,
+CSCO,BALANCE SHEET,,Net Tangible Assets,12M,-1%,-2%,7%,-45%,,,,MSFT,12M,50%,44%,61%,50%,,4%,47%,-6%,,
+CSCO,BALANCE SHEET,,Other Short Term Investments,12M,31%,24%,28%,19%,,,,MSFT,12M,69%,46%,36%,23%,,-22%,-16%,-25%,,
+CSCO,BALANCE SHEET,,Total Assets,12M,196%,182%,179%,231%,,,,MSFT,12M,199%,184%,194%,209%,,9%,13%,24%,,
+CSCO,BALANCE SHEET,,Accounts Payable,12M,5%,4%,4%,4%,,,,MSFT,12M,9%,10%,9%,9%,,25%,-5%,22%,,
+CSCO,BALANCE SHEET,,Payables,12M,6%,6%,11%,7%,,,,MSFT,12M,10%,12%,10%,11%,,33%,-4%,21%,,
+CSCO,BALANCE SHEET,,Payables And Accrued Expenses,12M,6%,6%,11%,7%,,,,MSFT,12M,10%,12%,10%,11%,,33%,-4%,21%,,
+CSCO,BALANCE SHEET,,Income Tax Payable,12M,2%,2%,7%,3%,,,,MSFT,12M,1%,2%,2%,2%,,87%,2%,21%,,
+CSCO,BALANCE SHEET,,Other Current Liabilities,12M,9%,10%,9%,10%,,,,MSFT,12M,7%,7%,7%,8%,,12%,13%,30%,,
+CSCO,BALANCE SHEET,,Current Liabilities,12M,53%,50%,55%,75%,,,,MSFT,12M,53%,48%,49%,51%,,7%,10%,20%,,
+CSCO,BALANCE SHEET,,Pensionand Other Post Retirement Benefit Plans Current,12M,8%,6%,7%,7%,,,,MSFT,12M,6%,5%,5%,5%,,6%,3%,14%,,
+CSCO,BALANCE SHEET,,Current Deferred Revenue,12M,24%,25%,24%,30%,,,,MSFT,12M,25%,23%,24%,23%,,10%,12%,13%,,
+CSCO,BALANCE SHEET,,Other Current Borrowings,12M,5%,1%,3%,1%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Current Debt,12M,5%,2%,3%,21%,,,,MSFT,12M,5%,1%,2%,4%,,-66%,91%,70%,,
+CSCO,BALANCE SHEET,,Current Debt And Capital Lease Obligation,12M,5%,2%,3%,21%,,,,MSFT,12M,5%,1%,2%,4%,,-66%,91%,70%,,
+CSCO,BALANCE SHEET,,Long Term Debt,12M,18%,16%,12%,36%,,,,MSFT,12M,30%,24%,20%,17%,,-6%,-11%,2%,,
+CSCO,BALANCE SHEET,,Current Deferred Liabilities,12M,24%,25%,24%,30%,,,,MSFT,12M,25%,23%,24%,23%,,10%,12%,13%,,
+,BALANCE SHEET,,Long Term Capital Lease Obligation,,,,,,,,,MSFT,12M,6%,6%,6%,6%,,19%,11%,22%,,
+CSCO,BALANCE SHEET,,Long Term Debt And Capital Lease Obligation,12M,18%,16%,12%,36%,,,,MSFT,12M,36%,30%,26%,24%,,-2%,-6%,6%,,
+,BALANCE SHEET,,Long Term Equity Investment,,,,,,,,,MSFT,12M,4%,3%,5%,6%,,15%,43%,48%,,
+CSCO,BALANCE SHEET,,Non Current Deferred Liabilities,12M,20%,20%,20%,23%,,,,MSFT,12M,2%,2%,2%,2%,,10%,8%,56%,,
+CSCO,BALANCE SHEET,,Non Current Deferred Revenue,12M,20%,20%,20%,23%,,,,MSFT,12M,2%,1%,1%,1%,,10%,1%,-11%,,
+CSCO,BALANCE SHEET,,Non Current Deferred Taxes Assets,12M,9%,9%,12%,12%,,,,,,,,,,,,,,,
+,BALANCE SHEET,,Non Current Deferred Taxes Liabilities,,,,,,,,,MSFT,12M,0%,0%,0%,1%,,16%,88%,505%,,
+CSCO,BALANCE SHEET,,Non Current Note Receivables,12M,6%,5%,5%,5%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Tradeand Other Payables Non Current,12M,17%,15%,10%,7%,,,,MSFT,12M,16%,13%,12%,11%,,-4%,-2%,9%,,
+CSCO,BALANCE SHEET,,Other Non Current Liabilities,12M,5%,4%,4%,5%,,,,MSFT,12M,8%,8%,8%,11%,,16%,16%,51%,,
+CSCO,BALANCE SHEET,,Total Liabilities Net Minority Interest,12M,113%,105%,101%,147%,,,,MSFT,12M,114%,100%,97%,99%,,3%,4%,18%,,
+CSCO,BALANCE SHEET,,Common Stock,12M,85%,83%,78%,85%,,,,MSFT,12M,49%,44%,44%,41%,,5%,8%,8%,,
+CSCO,BALANCE SHEET,,Common Stock Equity,12M,83%,77%,78%,84%,,,,MSFT,12M,84%,84%,97%,110%,,17%,24%,30%,,
+,BALANCE SHEET,,Capital Lease Obligations,,,,,,,,,MSFT,12M,6%,6%,6%,6%,,19%,11%,22%,,
+CSCO,BALANCE SHEET,,Preferred Stock,12M,0%,0%,0%,0%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Capital Stock,12M,85%,83%,78%,85%,,,,MSFT,12M,49%,44%,44%,41%,,5%,8%,8%,,
+CSCO,BALANCE SHEET,,Retained Earnings,12M,-1%,-3%,3%,2%,,,,MSFT,12M,34%,43%,56%,71%,,48%,41%,46%,,
+CSCO,BALANCE SHEET,,Tangible Book Value,12M,-1%,-2%,7%,-45%,,,,MSFT,12M,50%,44%,61%,50%,,4%,47%,-6%,,
+CSCO,BALANCE SHEET,,Other Equity Adjustments,12M,-1%,-3%,-3%,-3%,,,,MSFT,12M,1%,-2%,-3%,-2%,,-357%,36%,-12%,,
+CSCO,BALANCE SHEET,,Gains Losses Not Affecting Retained Earnings,12M,-1%,-3%,-3%,-3%,,,,MSFT,12M,1%,-2%,-3%,-2%,,-357%,36%,-12%,,
+CSCO,BALANCE SHEET,,Total Equity Gross Minority Interest,12M,83%,77%,78%,84%,,,,MSFT,12M,84%,84%,97%,110%,,17%,24%,30%,,
+CSCO,BALANCE SHEET,,Net Debt,12M,5%,5%,,44%,,,,MSFT,12M,26%,18%,6%,14%,,-18%,-65%,166%,,
+CSCO,BALANCE SHEET,,Total Debt,12M,23%,18%,15%,58%,,,,MSFT,12M,40%,31%,28%,27%,,-10%,-2%,12%,,
+CSCO,BALANCE SHEET,,Total Capitalization,12M,101%,93%,89%,121%,,,,MSFT,12M,114%,108%,117%,127%,,11%,16%,25%,,
+CSCO,BALANCE SHEET,,Working Capital,12M,26%,21%,21%,-7%,,,,MSFT,12M,57%,38%,38%,14%,,-22%,7%,-57%,,
+CSCO,BALANCE SHEET,,Ordinary Shares Number,12M,8%,8%,7%,7%,,,,MSFT,12M,4%,4%,4%,3%,,-1%,0%,0%,,
+CSCO,BALANCE SHEET,,Stockholders Equity,12M,83%,77%,78%,84%,,,,MSFT,12M,84%,84%,97%,110%,,17%,24%,30%,,
+CSCO,BALANCE SHEET,,Share Issued,12M,8%,8%,7%,7%,,,,MSFT,12M,4%,4%,4%,3%,,-1%,0%,0%,,
+CSCO,BALANCE SHEET,,Total Non Current Assets,12M,117%,111%,103%,163%,,,,MSFT,12M,89%,98%,107%,144%,,31%,17%,55%,,
+CSCO,BALANCE SHEET,,Total Non Current Liabilities Net Minority Interest,12M,60%,55%,46%,71%,,,,MSFT,12M,61%,52%,48%,48%,,0%,-2%,17%,,
+CSCO,BALANCE SHEET,,Total Tax Payable,12M,2%,2%,7%,3%,,,,MSFT,12M,1%,2%,2%,2%,,87%,2%,21%,,
+CSCO,BALANCE SHEET,,Other Receivables,12M,4%,8%,1%,0%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Loans Receivable,12M,5%,4%,5%,6%,,,,,,,,,,,,,,,
+CSCO,BALANCE SHEET,,Invested Capital,12M,106%,96%,93%,142%,,,,MSFT,12M,119%,109%,120%,131%,,8%,17%,26%,,
+CSCO,CASH FLOWS,,Change In Account Payable,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,2%,1%,-1%,1%,,5%,-192%,-230%,TTM,1%
+CSCO,CASH FLOWS,,Change In Payable,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,2%,1%,-1%,2%,,5%,-205%,-270%,TTM,1%
+CSCO,CASH FLOWS,,Income Tax Paid Supplemental Data,12M,7%,7%,6%,14%,,TTM,9%,,,,,,,,,,,,
+CSCO,CASH FLOWS,,Change In Payables And Accrued Expense,12M,0%,-1%,1%,-1%,,TTM,-2%,MSFT,12M,2%,1%,-1%,2%,,5%,-205%,-270%,TTM,1%
+CSCO,CASH FLOWS,,Change In Other Current Liabilities,12M,0%,1%,0%,1%,,TTM,1%,MSFT,12M,3%,2%,1%,2%,,-43%,-11%,99%,TTM,2%
+CSCO,CASH FLOWS,,Change In Other Working Capital,12M,3%,1%,6%,-6%,,TTM,-6%,MSFT,12M,1%,3%,3%,2%,,150%,-5%,-3%,TTM,1%
+CSCO,CASH FLOWS,,Change In Inventory,12M,0%,-2%,-2%,1%,,TTM,0%,MSFT,12M,0%,-1%,1%,1%,,52%,-211%,3%,TTM,1%
+CSCO,CASH FLOWS,,Change In Receivables,12M,3%,0%,3%,0%,,TTM,2%,MSFT,12M,-4%,-3%,-2%,-3%,,5%,-40%,76%,TTM,-2%
+CSCO,CASH FLOWS,,Change In Tax Payable,12M,,,,,,,,MSFT,12M,,,0%,1%,,,,-571%,,
+CSCO,CASH FLOWS,,Change In Working Capital,12M,4%,-3%,9%,-8%,,TTM,-5%,MSFT,12M,-1%,0%,-1%,1%,,-148%,-635%,-176%,TTM,0%
+CSCO,CASH FLOWS,,Change In Accrued Expense,12M,,-1%,1%,-1%,,,,,,,,,,,,,,,
+CSCO,CASH FLOWS,,Change In Income Tax Payable,12M,,,,,,,,MSFT,12M,,,0%,1%,,,,-571%,,
+CSCO,CASH FLOWS,,Deferred Income Tax,12M,-1%,-1%,-4%,-2%,,TTM,-1%,MSFT,12M,0%,-3%,-3%,-2%,,3701%,6%,-22%,TTM,-2%
+CSCO,CASH FLOWS,,Deferred Tax,12M,-1%,-1%,-4%,-2%,,TTM,-1%,MSFT,12M,0%,-3%,-3%,-2%,,3701%,6%,-22%,TTM,-2%
+CSCO,CASH FLOWS,,Changes In Account Receivables,12M,0%,-2%,1%,-1%,,TTM,2%,MSFT,12M,-4%,-3%,-2%,-3%,,5%,-40%,76%,TTM,-2%
+CSCO,CASH FLOWS,,Change In Other Current Assets,12M,-2%,-3%,0%,-1%,,TTM,-1%,MSFT,12M,-3%,-2%,-2%,-3%,,-20%,37%,75%,TTM,-3%
+CSCO,CASH FLOWS,,Depreciation,12M,4%,4%,3%,5%,,TTM,5%,MSFT,12M,7%,7%,7%,9%,,24%,-4%,61%,TTM,10%
+CSCO,CASH FLOWS,,Depreciation Amortization Depletion,12M,4%,4%,3%,5%,,TTM,5%,MSFT,12M,7%,7%,7%,9%,,24%,-4%,61%,TTM,10%
+CSCO,CASH FLOWS,,Depreciation And Amortization,12M,4%,4%,3%,5%,,TTM,5%,MSFT,12M,7%,7%,7%,9%,,24%,-4%,61%,TTM,10%
+CSCO,CASH FLOWS,,Stock Based Compensation,12M,4%,4%,4%,6%,,TTM,6%,MSFT,12M,4%,4%,5%,4%,,23%,28%,12%,TTM,4%
+CSCO,CASH FLOWS,,Interest Paid Supplemental Data,12M,1%,1%,1%,1%,,TTM,2%,,,,,,,,,,,,
+CSCO,CASH FLOWS,,Provisionand Write Offof Assets,12M,0%,0%,0%,0%,,TTM,0%,,,,,,,,,,,,
+CSCO,CASH FLOWS,,Gain Loss On Investment Securities,12M,,,,,,,,MSFT,12M,,,,,,,,,,
+CSCO,CASH FLOWS,,Gain Loss On Sale Of Business,12M,-1%,-1%,0%,0%,,TTM,0%,,,,,,,,,,,,
+CSCO,CASH FLOWS,,Operating Gains Losses,12M,-1%,-1%,0%,0%,,TTM,0%,MSFT,12M,-1%,0%,0%,0%,,-67%,-148%,56%,TTM,0%
+CSCO,CASH FLOWS,,Operating Cash Flow,12M,31%,26%,35%,20%,,TTM,23%,MSFT,12M,46%,45%,41%,48%,,16%,-2%,35%,TTM,48%
+CSCO,CASH FLOWS,,Cash Flow From Continuing Operating Activities,12M,31%,26%,35%,20%,,TTM,23%,MSFT,12M,46%,45%,41%,48%,,16%,-2%,35%,TTM,48%
+CSCO,CASH FLOWS,,Sale Of Business,12M,0%,,,,,,,,,,,,,,,,,,
+CSCO,CASH FLOWS,,Sale Of PPE,12M,0%,0%,0%,,,,,,,,,,,,,,,,
+CSCO,CASH FLOWS,,Sale Of Investment,12M,24%,17%,12%,20%,,TTM,18%,MSFT,12M,39%,23%,23%,15%,,-32%,7%,-25%,TTM,7%
+CSCO,CASH FLOWS,,Purchase Of Business,12M,-14%,-1%,-1%,-48%,,TTM,-48%,MSFT,12M,-5%,-11%,-1%,-28%,,147%,-92%,4040%,TTM,-27%
+CSCO,CASH FLOWS,,Purchase Of PPE,12M,-1%,-1%,-1%,-1%,,TTM,-1%,MSFT,12M,-12%,-12%,-13%,-18%,,16%,18%,58%,TTM,-19%
+CSCO,CASH FLOWS,,Purchase Of Investment,12M,-19%,-12%,-19%,-8%,,TTM,-8%,MSFT,12M,-37%,-13%,-18%,-7%,,-58%,42%,-53%,TTM,-4%
+CSCO,CASH FLOWS,,Net PPEPurchase And Sale,12M,-1%,-1%,-1%,-1%,,TTM,-1%,MSFT,12M,-12%,-12%,-13%,-18%,,16%,18%,58%,TTM,-19%
+CSCO,CASH FLOWS,,Net Business Purchase And Sale,12M,-14%,-1%,-1%,-48%,,TTM,-48%,MSFT,12M,-5%,-11%,-1%,-28%,,147%,-92%,4040%,TTM,-27%
+CSCO,CASH FLOWS,,Net Income,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,CASH FLOWS,,Net Income From Continuing Operations,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,CASH FLOWS,,Net Investment Purchase And Sale,12M,5%,5%,-7%,12%,,TTM,10%,MSFT,12M,2%,9%,5%,7%,,541%,-45%,76%,TTM,3%
+CSCO,CASH FLOWS,,Cash Flow From Continuing Investing Activities,12M,-11%,3%,-9%,-38%,,TTM,-40%,MSFT,12M,-16%,-15%,-11%,-40%,,10%,-25%,328%,TTM,-44%
+CSCO,CASH FLOWS,,Investing Cash Flow,12M,-11%,3%,-9%,-38%,,TTM,-40%,MSFT,12M,-16%,-15%,-11%,-40%,,10%,-25%,328%,TTM,-44%
+CSCO,CASH FLOWS,,Issuance Of Debt,12M,0%,2%,0%,59%,,TTM,71%,MSFT,12M,,0%,0%,12%,,,,inf%,TTM,9%
+CSCO,CASH FLOWS,,Long Term Debt Issuance,12M,0%,2%,0%,59%,,TTM,71%,MSFT,12M,,0%,0%,10%,,,,inf%,TTM,7%
+,CASH FLOWS,,Short Term Debt Issuance,,,,,,,,,MSFT,12M,,0%,0%,2%,,,,inf%,,
+CSCO,CASH FLOWS,,Net Short Term Debt Issuance,12M,0%,1%,-1%,1%,,TTM,1%,MSFT,12M,,0%,0%,2%,,,,inf%,TTM,-8%
+CSCO,CASH FLOWS,,Net Long Term Debt Issuance,12M,-6%,-5%,-1%,35%,,TTM,39%,MSFT,12M,-2%,-5%,-1%,-2%,,141%,-70%,70%,TTM,-4%
+CSCO,CASH FLOWS,,Issuance Of Capital Stock,12M,1%,1%,1%,1%,,,,MSFT,12M,1%,1%,1%,1%,,9%,1%,7%,TTM,1%
+CSCO,CASH FLOWS,,Common Stock Issuance,12M,1%,1%,1%,1%,,,,MSFT,12M,1%,1%,1%,1%,,9%,1%,7%,TTM,1%
+CSCO,CASH FLOWS,,Repayment Of Debt,12M,-6%,-7%,-1%,-24%,,TTM,-32%,MSFT,12M,-2%,-5%,-1%,-12%,,141%,-70%,957%,TTM,-11%
+CSCO,CASH FLOWS,,Long Term Debt Payments,12M,-6%,-7%,-1%,-24%,,TTM,-32%,MSFT,12M,-2%,-5%,-1%,-12%,,141%,-70%,957%,TTM,-11%
+CSCO,CASH FLOWS,,Net Issuance Payments Of Debt,12M,-6%,-4%,-2%,36%,,TTM,40%,MSFT,12M,-2%,-5%,-1%,0%,,141%,-70%,-121%,TTM,-12%
+CSCO,CASH FLOWS,,Common Stock Payments,12M,-7%,-16%,-9%,-13%,,TTM,-14%,MSFT,12M,-16%,-16%,-10%,-7%,,19%,-32%,-22%,TTM,-7%
+CSCO,CASH FLOWS,,Cash Dividends Paid,12M,-12%,-12%,-11%,-12%,,TTM,-12%,MSFT,12M,-10%,-9%,-9%,-9%,,10%,9%,10%,TTM,-9%
+CSCO,CASH FLOWS,,Capital Expenditure,12M,-1%,-1%,-1%,-1%,,TTM,-1%,MSFT,12M,-12%,-12%,-13%,-18%,,16%,18%,58%,TTM,-19%
+CSCO,CASH FLOWS,,Repurchase Of Capital Stock,12M,-7%,-16%,-9%,-13%,,TTM,-14%,MSFT,12M,-16%,-16%,-10%,-7%,,19%,-32%,-22%,TTM,-7%
+CSCO,CASH FLOWS,,Net Common Stock Issuance,12M,-6%,-15%,-7%,-11%,,TTM,-13%,MSFT,12M,-15%,-16%,-10%,-6%,,20%,-34%,-25%,TTM,-6%
+CSCO,CASH FLOWS,,Net Other Financing Charges,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,-2%,0%,0%,-1%,,-66%,17%,30%,TTM,-1%
+CSCO,CASH FLOWS,,Financing Cash Flow,12M,-24%,-31%,-20%,13%,,TTM,15%,MSFT,12M,-29%,-30%,-21%,-15%,,21%,-25%,-14%,TTM,-27%
+CSCO,CASH FLOWS,,Cash Flow From Continuing Financing Activities,12M,-24%,-31%,-20%,13%,,TTM,15%,MSFT,12M,-29%,-30%,-21%,-15%,,21%,-25%,-14%,TTM,-27%
+CSCO,CASH FLOWS,,Beginning Cash Position,12M,24%,19%,15%,22%,,TTM,21%,MSFT,12M,8%,7%,7%,14%,,5%,-2%,149%,TTM,32%
+CSCO,CASH FLOWS,,Net Other Investing Changes,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,-1%,-1%,-1%,-1%,,206%,10%,-58%,TTM,0%
+CSCO,CASH FLOWS,,End Cash Position,12M,20%,17%,20%,16%,,TTM,19%,MSFT,12M,8%,7%,16%,7%,,-2%,149%,-47%,TTM,8%
+CSCO,CASH FLOWS,,Changes In Cash,12M,-4%,-2%,6%,-5%,,TTM,-2%,MSFT,12M,0%,0%,10%,-7%,,-122%,-13894%,-177%,TTM,-23%
+CSCO,CASH FLOWS,,Change In Cash Supplemental As Reported,12M,-4%,-3%,5%,-5%,,TTM,-2%,MSFT,12M,0%,0%,10%,-7%,,-145%,-7190%,-179%,TTM,-23%
+CSCO,CASH FLOWS,,Effect Of Exchange Rate Changes,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,0%,0%,0%,0%,,386%,38%,8%,TTM,0%
+CSCO,CASH FLOWS,,Free Cash Flow,12M,30%,25%,33%,19%,,TTM,22%,MSFT,12M,33%,33%,28%,30%,,16%,-9%,25%,TTM,29%
+CSCO,CASH FLOWS,,Common Stock Dividend Paid,12M,-12%,-12%,-11%,-12%,,TTM,-12%,MSFT,12M,-10%,-9%,-9%,-9%,,10%,9%,10%,TTM,-9%
+CSCO,INCOME STATEMENT,,Total Revenue,12M,100%,100%,100%,100%,,TTM,100%,MSFT,12M,100%,100%,100%,100%,,18%,7%,16%,TTM,100%
+CSCO,INCOME STATEMENT,,Operating Revenue,12M,100%,100%,100%,100%,,TTM,100%,MSFT,12M,100%,100%,100%,100%,,18%,7%,16%,TTM,100%
+CSCO,INCOME STATEMENT,,Cost Of Revenue,12M,36%,37%,37%,35%,,TTM,35%,MSFT,12M,31%,32%,31%,30%,,20%,5%,13%,TTM,31%
+CSCO,INCOME STATEMENT,,Reconciled Cost Of Revenue,12M,33%,34%,35%,32%,,TTM,31%,MSFT,12M,31%,32%,31%,30%,,20%,5%,13%,TTM,31%
+CSCO,INCOME STATEMENT,,Gross Profit,12M,64%,63%,63%,65%,,TTM,65%,MSFT,12M,69%,68%,69%,70%,,17%,8%,17%,TTM,69%
+CSCO,INCOME STATEMENT,,Research And Development,12M,13%,13%,13%,15%,,TTM,16%,MSFT,12M,12%,12%,13%,12%,,18%,11%,9%,TTM,12%
+CSCO,INCOME STATEMENT,,Selling And Marketing Expense,12M,19%,18%,17%,19%,,TTM,20%,MSFT,12M,12%,11%,11%,10%,,8%,4%,7%,TTM,10%
+CSCO,INCOME STATEMENT,,Selling General And Administration,12M,23%,22%,22%,24%,,TTM,26%,MSFT,12M,15%,14%,14%,13%,,10%,9%,6%,TTM,13%
+CSCO,INCOME STATEMENT,,Depreciation And Amortization In Income Statement,12M,0%,1%,0%,1%,,TTM,2%,,,,,,,,,,,,
+CSCO,INCOME STATEMENT,,General And Administrative Expense,12M,4%,4%,4%,5%,,TTM,6%,MSFT,12M,3%,3%,4%,3%,,16%,28%,0%,TTM,3%
+CSCO,INCOME STATEMENT,,Depreciation Amortization Depletion Income Statement,12M,0%,1%,0%,1%,,TTM,2%,,,,,,,,,,,,
+CSCO,INCOME STATEMENT,,Amortization,12M,0%,1%,0%,1%,,TTM,2%,,,,,,,,,,,,
+CSCO,INCOME STATEMENT,,Amortization Of Intangibles Income Statement,12M,0%,1%,0%,1%,,TTM,2%,,,,,,,,,,,,
+CSCO,INCOME STATEMENT,,Reconciled Depreciation,12M,4%,4%,3%,5%,,TTM,5%,MSFT,12M,7%,7%,7%,9%,,24%,-4%,61%,TTM,10%
+CSCO,INCOME STATEMENT,,Operating Expense,12M,36%,35%,35%,41%,,TTM,43%,MSFT,12M,27%,26%,27%,25%,,14%,10%,7%,TTM,25%
+CSCO,INCOME STATEMENT,,EBIT,12M,27%,29%,28%,25%,,TTM,21%,MSFT,12M,44%,43%,43%,45%,,17%,6%,21%,TTM,45%
+CSCO,INCOME STATEMENT,,Operating Income,12M,28%,27%,27%,24%,,TTM,22%,MSFT,12M,42%,42%,42%,45%,,19%,6%,24%,TTM,44%
+CSCO,INCOME STATEMENT,,Interest Income,12M,1%,1%,2%,3%,,TTM,2%,MSFT,12M,1%,1%,1%,1%,,-2%,43%,5%,TTM,1%
+CSCO,INCOME STATEMENT,,Interest Income Non Operating,12M,1%,1%,2%,3%,,TTM,2%,MSFT,12M,1%,1%,1%,1%,,-2%,43%,5%,TTM,1%
+CSCO,INCOME STATEMENT,,Interest Expense,12M,1%,1%,1%,2%,,TTM,2%,MSFT,12M,1%,1%,1%,1%,,-12%,-5%,49%,TTM,1%
+CSCO,INCOME STATEMENT,,Interest Expense Non Operating,12M,1%,1%,1%,2%,,TTM,2%,MSFT,12M,1%,1%,1%,1%,,-12%,-5%,49%,TTM,1%
+CSCO,INCOME STATEMENT,,Net Interest Income,12M,0%,0%,1%,1%,,TTM,0%,MSFT,12M,0%,0%,0%,0%,,-114%,3210%,-78%,TTM,0%
+CSCO,INCOME STATEMENT,,Net Non Operating Interest Income Expense,12M,0%,0%,1%,1%,,TTM,0%,MSFT,12M,0%,0%,0%,0%,,-114%,3210%,-78%,TTM,0%
+CSCO,INCOME STATEMENT,,Other Income Expense,12M,-1%,1%,-1%,-2%,,TTM,-3%,MSFT,12M,1%,0%,0%,-1%,,-78%,-179%,685%,TTM,-1%
+CSCO,INCOME STATEMENT,,Other Non Operating Income Expenses,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,0%,0%,0%,-1%,,-133%,597%,491%,TTM,-1%
+CSCO,INCOME STATEMENT,,Gain On Sale Of Security,12M,1%,1%,0%,0%,,TTM,0%,MSFT,12M,1%,0%,0%,0%,,-67%,-97%,-2387%,TTM,0%
+CSCO,INCOME STATEMENT,,Restructuring And Mergern Acquisition,12M,2%,0%,1%,1%,,TTM,3%,,,,,,,,,,,,
+CSCO,INCOME STATEMENT,,Pretax Income,12M,27%,28%,27%,23%,,TTM,19%,MSFT,12M,42%,42%,42%,44%,,18%,7%,21%,TTM,44%
+CSCO,INCOME STATEMENT,,Tax Provision,12M,5%,5%,5%,4%,,TTM,1%,MSFT,12M,6%,6%,8%,8%,,12%,54%,16%,TTM,8%
+CSCO,INCOME STATEMENT,,Tax Effect Of Unusual Items,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,0%,0%,0%,0%,,-76%,-107%,3406%,TTM,0%
+CSCO,INCOME STATEMENT,,Tax Rate For Calcs,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,0%,0%,0%,0%,,-5%,45%,-4%,TTM,0%
+CSCO,INCOME STATEMENT,,Net Income,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Net Income Common Stockholders,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Net Income Continuous Operations,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Net Income From Continuing And Discontinued Operation,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Net Income From Continuing Operation Net Minority Interest,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Net Income Including Noncontrolling Interests,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Normalized Income,12M,22%,22%,23%,21%,,TTM,20%,MSFT,12M,36%,37%,34%,36%,,20%,0%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Diluted NIAvailto Com Stockholders,12M,21%,23%,22%,19%,,TTM,18%,MSFT,12M,36%,37%,34%,36%,,19%,-1%,22%,TTM,36%
+CSCO,INCOME STATEMENT,,Basic EPS,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,0%,0%,0%,0%,,19%,0%,22%,TTM,0%
+CSCO,INCOME STATEMENT,,Diluted EPS,12M,0%,0%,0%,0%,,TTM,0%,MSFT,12M,0%,0%,0%,0%,,20%,0%,22%,TTM,0%
+CSCO,INCOME STATEMENT,,Basic Average Shares,12M,8%,8%,7%,8%,,TTM,8%,MSFT,12M,4%,4%,4%,3%,,-1%,-1%,0%,TTM,3%
+CSCO,INCOME STATEMENT,,Diluted Average Shares,12M,9%,8%,7%,8%,,TTM,8%,MSFT,12M,5%,4%,4%,3%,,-1%,-1%,0%,TTM,3%
+CSCO,INCOME STATEMENT,,EBITDA,12M,31%,33%,31%,29%,,TTM,27%,MSFT,12M,51%,51%,50%,54%,,18%,5%,27%,TTM,55%
+CSCO,INCOME STATEMENT,,Normalized EBITDA,12M,32%,32%,32%,31%,,TTM,29%,MSFT,12M,50%,50%,50%,54%,,19%,5%,27%,TTM,55%
+CSCO,INCOME STATEMENT,,Total Expenses,12M,72%,73%,73%,76%,,TTM,78%,MSFT,12M,58%,58%,58%,55%,,17%,7%,10%,TTM,56%
+CSCO,INCOME STATEMENT,,Total Operating Income As Reported,12M,26%,27%,26%,23%,,TTM,19%,MSFT,12M,42%,42%,42%,45%,,19%,6%,24%,TTM,44%
+CSCO,INCOME STATEMENT,,Special Income Charges,12M,-2%,0%,-1%,-1%,,TTM,-3%,MSFT,12M,0%,0%,0%,0%,,677%,-70%,587%,TTM,0%
+,INCOME STATEMENT,,Write Off,,,,,,,,,MSFT,12M,0%,0%,0%,0%,,677%,-70%,587%,TTM,0%
+CSCO,INCOME STATEMENT,,Total Unusual Items,12M,-1%,1%,-1%,-2%,,TTM,-3%,MSFT,12M,1%,0%,0%,0%,,-74%,-104%,3560%,TTM,0%
+CSCO,INCOME STATEMENT,,Total Unusual Items Excluding Goodwill,12M,-1%,1%,-1%,-2%,,TTM,-3%,MSFT,12M,1%,0%,0%,0%,,-74%,-104%,3560%,TTM,0%
+CSCO,INCOME STATEMENT,,Other Gand A,12M,4%,4%,4%,5%,,TTM,6%,MSFT,12M,3%,3%,4%,3%,,16%,28%,0%,TTM,3%

@@ -61,4 +61,6 @@ select * from ru.admo where subjid = 'MSFT'
 
 select * from ru.cd where aval > 0.95 or aval < -0.95
 
-select distinct subjid from ru.cd
+select * from ru.cd where subjid = 'MSFT' and (aval < -0.9 or aval > 0.9)
+
+
