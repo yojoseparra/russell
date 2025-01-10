@@ -524,30 +524,33 @@ This is the Cosine distance for MSFT with other companies. The companies with ec
 
 Fig. 4 Table of frequencies of counts on which Cosine Distance is greater than 9 for MSFT
 
-| fidtc    2021-06-30  2022-06-30  2023-06-30  2024-06-30  2024-09-30 |
-|---------------------------------------------------------------------|
-| subjid1                                                             |
-| 0HAU.IL         NaN         1.0         1.0         2.0         NaN |
-| ALFVY           NaN         NaN         NaN         1.0         NaN |
-| CSCO            3.0         3.0         3.0         2.0         NaN |
-| DIOD            NaN         NaN         1.0         NaN         NaN |
-| KAI             NaN         NaN         NaN         2.0         NaN |
-| MATX            NaN         NaN         NaN         1.0         NaN |
-| MSCI            NaN         NaN         NaN         NaN         1.0 |
-| MSFT           23.0        26.0        30.0        20.0         4.0 |
-| NVZMY           NaN         NaN         1.0         3.0         NaN |
-| RMD             NaN         NaN         2.0         4.0         NaN |
-| SAP             NaN         NaN         NaN         3.0         NaN |
-| SAUHF           NaN         2.0         3.0         3.0         NaN |
-| SDMHF           NaN         2.0         2.0         3.0         NaN |
-| SNPS            NaN         1.0         3.0         3.0         NaN |
-| SPXCY           NaN         NaN         1.0         NaN         NaN |
-| SPXSF           NaN         2.0         2.0         2.0         NaN |
-| TCEHY           NaN         NaN         3.0         2.0         NaN |
-| TROW            NaN         NaN         NaN         2.0         NaN |
-| VACNY           NaN         NaN         2.0         2.0         NaN |
-| WNS             NaN         NaN         1.0         1.0         NaN |
-| WST             NaN         NaN         3.0         NaN         NaN |
+| subjid1 | 6/30/2021 0:00 | 6/30/2022 0:00 | 6/30/2023 0:00 | 6/30/2024 0:00 | 9/30/2024 0:00 |
+|---------|----------------|----------------|----------------|----------------|----------------|
+| 0HAU.IL |                | 1              | 1              | 2              |                |
+| ALFVY   |                |                |                | 1              |                |
+| CSCO    | 3              | 3              | 3              | 2              |                |
+| DIOD    |                |                | 1              |                |                |
+| GOOGL   | 4              | 4              | 4              | 3              |                |
+| KAI     |                |                |                | 2              |                |
+| MATX    |                |                |                | 1              |                |
+| MSCI    |                |                |                |                | 1              |
+| MSFT    | 23             | 26             | 30             | 20             | 4              |
+| NVZMY   |                |                | 1              | 3              |                |
+| RMD     |                |                | 2              | 4              |                |
+| SAP     |                |                |                | 3              |                |
+| SAUHF   |                | 2              | 3              | 3              |                |
+| SDMHF   |                | 2              | 2              | 3              |                |
+| SNPS    |                | 1              | 3              | 3              |                |
+| SPXCY   |                |                | 1              |                |                |
+| SPXSF   |                | 2              | 2              | 2              |                |
+| TCEHY   |                |                | 3              | 2              |                |
+| TROW    |                |                |                | 2              |                |
+| VACNY   |                |                | 2              | 2              |                |
+| WNS     |                |                | 1              | 1              |                |
+| WST     |                |                | 3              |                |                |
 
-Based on this table CSCO (Cisco Systems) is the wide MOAT company that has financials closest to MSFT. It is true? if you look at the financials, they are really close to each other in general (capital structure, debt ...). Notice that the Cosine do not weight any financials, therefore each value has the same importance. In reality this is not true in the context of investing, one exaple is for instance than MSFT is more profitable and is more efficient in terms of expending. Further analysis might be weighting the financials according to imporance and growth, this is not done here, but this is an important exercise. If you have had this information 10 years ago and you had bought the cheper CSCO you would underperform notorously compared to MSFT.
+
+Based on this table CSCO (Cisco Systems) is the wide MOAT company that has financials closest to MSFT. It is true? if you look at the financials, they are really close to each other in general (capital structure, debt ...). Notice that the Cosine do not weight any financials, therefore each value has the same importance. In reality this is not true in the context of investing, one exaple is for instance than MSFT is more profitable and is more efficient in terms of expending. Further analysis might be weighting the financials according to imporance and growth, this is not done here, but this is an important exercise. If you have had this information 10 years ago and you had bought the cheper CSCO you would underperform notorously compared to MSFT. Aplhabet (GOOGL) is a good software company, as MSFT both companies have very similar financials, MSFT more profitable.
+
+
   

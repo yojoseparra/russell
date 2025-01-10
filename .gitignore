@@ -12,3 +12,10 @@ data/admo_console_display_example.csv
 data/archive/
 delete.py
 data/a.csv
+archive/admo_console_display_chg.py
+archive/console_display.py
+archive/console_display.sql
+data/archive/
+archive/admo_console_display.py
+archive/console_fistresn_wide.py
+archive/console_fistresn.py
