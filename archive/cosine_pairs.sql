@@ -7,3 +7,4 @@ on a.subjid = b.subjid
 and a.fidtc = b.fidtc
 
 --ALTER TABLE ru.russell RENAME TO ru;
+drop table ru.pr

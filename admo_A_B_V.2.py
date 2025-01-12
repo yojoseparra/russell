@@ -1,5 +1,7 @@
 # Warren Buffet to select companies based on book 'The Guru Investor' By John P. Reese
-
+# ADMO_TIKERA_TICKERB_V.2
+# Jose Parra
+# 11JAN2025
 # --------------------------------------------------------------------------------------------------------
 # --------------------------------------------- MOAT Pair Compare ----------------------------------------
 # --------------------------------------------------------------------------------------------------------
@@ -122,9 +124,29 @@ for tickers in pairs:
 exec(open('connect2sql.py').read())
 import pandas as pd
 # Query the database and load directly into a DataFrame
-a = pd.read_sql_query("select subjid, fidtc, SPLIT_PART(afidtc, '_', 1) as subjid1, aval as cosine from ru.cd where subjid = 'MSFT' and (aval < -0.9 or aval > 0.9)", conn)
+a = pd.read_sql_query("select subjid, fidtc, SPLIT_PART(afidtc, '_', 1) as subjid1, aval as cosine from ru.cd where subjid = 'DIOD' and (aval < -0.85 or aval > 0.85)", conn)
 
 b = pd.pivot_table(a, values= 'subjid', aggfunc='count', index= ['subjid1'], columns='fidtc')
 b.reset_index(inplace=True)
-b.to_csv('data/b.csv', index=False)
+print(b.to_string())
+
+# --------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------- COMPANY PROFILE  -------------------------------------------------------
+#b.to_csv('data/b.csv')
+print(b['subjid1'].to_list())
+tickers = ['0HAU.IL', '600276.SS', '6268.T', 'ALFVY', 'AMZN', 'APH', 'BABA', 'CBCFF', 'DANOY', 'DIOD', 'EKTAY', 'EXPD', 'FUC.F', 'FWRD', 'GMWKF', 'GOOGL', 'GVDBF', 'HD', 'HDSN', 'HSY', 'INFY', 'IVU.DE', 'KAI', 'KAO.F', 'KHC', 'LANC']
+
+tickers = ['LGRVF', 'LMT', 'LRLCF', 'LTOUF', 'MANH', 'MASI', 'MATX', 'MCRI', 'MKC', 'MKTX', 'MNST', 'MPWR', 'MRK', 'MSFT', 'NDSN', 'NJDCY', 'NKE', 'NOC', 'NVZMY', 'OLCLY', 'OLTH.AT', 'PAA', 'PEP', 'PG', 'PLZL.ME', 'POOL', 'RCRRF', 'RELIANCE.NS']
+
+tickers = [  'RMD', 'SAUHF', 'SCCO', 'SDMHF', 'SEIC', 'SGIOY', 'SHW', 'SHZHY', 'SKFOF', 'SNPS', 'SPXSF', 'SSDOY', 'SYIEY', 'TCEHY', 'TGYM.MI', 'TROW', 'TTC', 'ULTA', 'UNICY', 'UPS', 'VACNY', 'VEEV', 'WDFC', 'WEGE3.SA', 'WMMVY', 'WMT', 'WNS', 'WST', 'WU', 'WYNN', 'XPEL', 'ZTS']
+
+
+for ticker in tickers:
+    querying = f"SELECT *  from ru.pr where subjid in ('{ticker}')"
+    pr = pd.read_sql_query( querying, conn)
+    print(pr.to_string())
+
+querying1 = f"SELECT *  from ru.pr where subjid in ('{tickers[0]}')"
+pr1 = pd.read_sql_query( querying1, conn)
+print(pr1.to_string())
 

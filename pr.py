@@ -2,15 +2,13 @@
 import pandas as pd
 import psycopg2
 import os
-wd = os.getcwd()
-d = pd.read_csv(wd+"/data/pr.csv")
 
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 from yahooquery import Ticker
 
 # List of company tickers
-companies = ['BABA', 'GOOGL', 'AMZN', 'AAPL', 'BRK-B', 'EXPD', 'MA', 'MSFT', 'NVDA', 'PP.AT', 'QLYS', 'VEEV', 'NVO', 
+tickers = ['BABA', 'GOOGL', 'AMZN', 'AAPL', 'BRK-B', 'EXPD', 'MA', 'MSFT', 'NVDA', 'PP.AT', 'QLYS', 'VEEV', 'NVO', 
 'IVU.DE', 'OLTH.AT', 'AVGO', 'GMWKF', 'MASI', 'MNST', 'WYNN', 'CHH', 'ANSS', 'IDXX', 'DEO', 'CLCGY', 'LRLCF', 'DANOY',
 '0NWV.IL', 'PLWL.ME', 'GMKN.ME', 'CSCO', 'LVS', 'ETKAY', 'EXPGY', 'BKNG', 'VRSN', 'NJDCY', 'GVDBF',
 'EBAY', 'NVDA', 'CBCFF', 'INFY', 'AMGN', 'KAO.F', 'CWW.F', 'FUC.F', 'AAPL', 'KHC', 'SHW', 'ULTA', 'APH', 'AME', 'AMT',
@@ -181,73 +179,38 @@ import time
 from yahooquery import Ticker
 from requests.exceptions import RetryError
 
-def get_profile(ticker):
-    retries = 3  # Set the number of retries
-    for attempt in range(retries):
-        try:
-            t = Ticker(ticker)
-            profile = t.asset_profile
-            return profile
-        except RetryError:
-            print(f"Rate limit hit for {ticker}, retrying...")
-            time.sleep(30)  # Wait before retrying
-        except Exception as e:
-            print(f"Error fetching data for {ticker}: {e}")
-            break
-    return None
 
-# Example usage
-tickers = ['AAPL', 'MSFT', 'GOOG']
+# Create a Ticker object for multiple symbols
+companies = Ticker(tickers)
+# Fetch profiles for all companies
+profiles = companies.asset_profile
 
-# Create an empty list to store profile data
-profiles_list = []
-
-# Fetch and store profiles
-for ticker in tickers:
-    profile = get_profile(ticker)
-    if profile:
-        # Assuming the profile is a dictionary, you can convert it into a row
-        profile_data = profile.get('assetProfile', {})
-        profile_data['ticker'] = ticker  # Add the ticker as a new column
-        profiles_list.append(profile_data)
-    else:
-        print(f"Could not fetch profile for {ticker}")
-
-# Convert the list of profiles into a DataFrame
-df_profiles = pd.DataFrame(profiles_list)
-
-# Display the DataFrame
-print(df_profiles)
-
-
-
-
-
-
-
-
-
-
-
-
+# Convert to a DataFrame
+profiles_df = pd.DataFrame(profiles).T  # Transpose for easier reading
+profiles_df.reset_index(inplace=True)
+#profiles_df.drop('level_0', axis=1)
 
 from sqlalchemy import create_engine
 from urllib.parse import quote_plus
 
-username = ''
-password = ''
-host = ''
-database = ''
+# connecting to postgreSQL
+exec(open('connect2sql.py').read())
 
-# Escape the password
-escaped_password = quote_plus(password)
+# profiles_df.to_csv('data/profiles.csv', index=True)
 
+
+d = pd.read_csv('data/profiles.csv',  encoding='utf-8')
+
+
+# connecting to postgreSQL
+exec(open('connect2sql.py').read())
 # Connection string
 connection_string = f'postgresql+psycopg2://{username}:{escaped_password}@{host}/{database}'
 engine = create_engine(connection_string)
 
 
-# Insert the DataFrame into the SQL table
+# Insert the DataFrame into the SQL table this is the cd or cosine distance
+# adcd_1 represents cosine distances within subjids or tickers for different periods.
 d.to_sql('pr', con=engine, if_exists='replace', index=False, schema='ru')
 
 

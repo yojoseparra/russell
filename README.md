@@ -522,35 +522,109 @@ Fig. 3 Cosine Distance calculations for Microsoft (Wide MOAT by Morningstar). Va
 
 This is the Cosine distance for MSFT with other companies. The companies with economics simmilar to MSFT are GOOGL, CSCO, RMD, NVZMY, VACNY, TCEHY, SPXSF, SPXCY, SNPS, SAUHF, RMD, DIOD, MATX, KAI, SAP, TROW, 0HAU.IL. To have a better overview, take a look at the following table indicating the number of counts acros the years.
 
-Fig. 4 Table of frequencies of counts on which Cosine Distance is greater than 9 for MSFT
+Fig. 4 Table of frequencies of counts on which Cosine Distance > 0.8 or < -0.8 for MSFT
 
-| subjid1 | 6/30/2021 0:00 | 6/30/2022 0:00 | 6/30/2023 0:00 | 6/30/2024 0:00 | 9/30/2024 0:00 |
-|---------|----------------|----------------|----------------|----------------|----------------|
-| 0HAU.IL |                | 1              | 1              | 2              |                |
-| ALFVY   |                |                |                | 1              |                |
-| CSCO    | 3              | 3              | 3              | 2              |                |
-| DIOD    |                |                | 1              |                |                |
-| GOOGL   | 4              | 4              | 4              | 3              |                |
-| KAI     |                |                |                | 2              |                |
-| MATX    |                |                |                | 1              |                |
-| MSCI    |                |                |                |                | 1              |
-| MSFT    | 23             | 26             | 30             | 20             | 4              |
-| NVZMY   |                |                | 1              | 3              |                |
-| RMD     |                |                | 2              | 4              |                |
-| SAP     |                |                |                | 3              |                |
-| SAUHF   |                | 2              | 3              | 3              |                |
-| SDMHF   |                | 2              | 2              | 3              |                |
-| SNPS    |                | 1              | 3              | 3              |                |
-| SPXCY   |                |                | 1              |                |                |
-| SPXSF   |                | 2              | 2              | 2              |                |
-| TCEHY   |                |                | 3              | 2              |                |
-| TROW    |                |                |                | 2              |                |
-| VACNY   |                |                | 2              | 2              |                |
-| WNS     |                |                | 1              | 1              |                |
-| WST     |                |                | 3              |                |                |
+| subjid1     | 6/30/2021 0:00 | 6/30/2022 0:00 | 6/30/2023 0:00 | 6/30/2024 0:00 | 9/30/2024 0:00 |
+|-------------|----------------|----------------|----------------|----------------|----------------|
+|             |                |                |                |                |                |
+| 0HAU.IL     | 4              | 4              | 4              | 4              |                |
+| 0NWV.IL     | 4              | 4              | 4              | 4              |                |
+| 6268.T      | 3              | 4              | 4              | 4              |                |
+| AAPL        | 4              | 4              | 4              | 2              |                |
+| ALFVY       | 4              | 4              | 4              | 4              |                |
+| AME         | 1              | 4              | 4              | 4              | 1              |
+| ANSS        |                | 4              | 4              | 4              |                |
+| APH         | 4              | 4              | 4              | 4              |                |
+| BABA        | 4              | 4              | 4              | 4              |                |
+| CBCFF       | 3              | 3              | 4              | 4              |                |
+| CSCO        | 4              | 4              | 4              | 4              |                |
+| DANOY       | 4              | 4              | 4              | 4              |                |
+| DEO         | 4              | 4              | 3              | 4              |                |
+| DIOD        | 4              | 4              | 4              | 4              |                |
+| EKTAY       | 4              | 4              | 4              | 4              |                |
+| GMWKF       | 4              | 4              | 4              | 4              |                |
+| GOOGL       | 4              | 4              | 4              | 4              | 1              |
+| GVDBF       | 3              | 4              | 4              | 4              |                |
+| HDSN        | 2              | 2              | 2              | 2              |                |
+| HSY         | 4              | 4              | 4              | 4              | 1              |
+| INFY        | 4              | 4              | 4              | 3              |                |
+| IVU.DE      | 4              | 4              | 4              | 2              |                |
+| KAI         | 4              | 4              | 4              | 4              |                |
+| KAO.F       | 4              | 4              | 4              | 4              |                |
+| LANC        |                |                | 1              |                |                |
+| LGRVF       | 4              | 4              | 4              | 4              |                |
+| LRLCF       | 4              | 4              | 4              | 4              |                |
+| LTOUF       | 4              | 4              | 4              |                |                |
+| MANH        | 4              | 4              | 4              | 1              | 1              |
+| MASI        | 3              | 3              | 3              | 4              |                |
+| MATX        | 3              | 3              | 3              | 4              |                |
+| MCRI        |                | 1              | 4              | 4              |                |
+| MKC         |                | 1              |                | 4              |                |
+| MKTX        | 4              | 4              | 4              | 4              | 1              |
+| MNST        | 2              | 3              | 4              | 3              |                |
+| MPWR        | 4              | 4              | 4              | 4              |                |
+| MRK         | 2              | 4              | 4              | 4              | 1              |
+| MSFT        | 23             | 26             | 30             | 20             | 4              |
+| NDSN        | 2              | 3              | 3              | 4              |                |
+| NJDCY       | 3              | 4              | 4              | 4              |                |
+| NKE         | 4              | 4              | 4              |                |                |
+| NOC         | 2              | 4              | 3              | 3              |                |
+| NOW         | 4              | 4              | 4              | 3              |                |
+| NVDA        | 3              | 3              | 3              | 2              | 1              |
+| NVS         | 4              | 4              | 4              | 4              |                |
+| NVZMY       | 4              | 4              | 4              | 4              |                |
+| OLCLY       | 1              | 1              | 2              | 2              |                |
+| OLTH.AT     | 4              | 4              | 4              | 4              |                |
+| PAYX        | 2              | 2              | 2              |                |                |
+| PGPHF       | 4              | 4              | 4              | 2              |                |
+| PLZL.ME     | 3              | 3              | 3              | 3              | 1              |
+| PUODY       | 4              | 4              | 4              | 4              |                |
+| QLYS        | 4              | 3              | 3              | 2              | 1              |
+| RCRRF       | 2              | 3              | 4              | 3              |                |
+| REA.AX      |                | 1              | 3              | 4              |                |
+| REC.MI      | 2              | 3              | 2              | 4              | 1              |
+| RELIANCE.NS | 4              | 4              | 4              | 4              |                |
+| RMD         | 4              | 4              | 4              | 4              | 1              |
+| ROK         | 1              | 1              | 1              | 3              |                |
+| ROL         | 3              | 4              | 4              | 4              |                |
+| SAFRY       | 3              | 3              | 3              | 3              |                |
+| SAP         | 4              | 4              | 4              | 4              |                |
+| SAUHF       | 4              | 4              | 4              | 4              |                |
+| SBGSY       | 4              | 4              | 4              | 4              |                |
+| SCCO        | 4              | 4              | 4              | 4              | 1              |
+| SDMHF       | 3              | 3              | 3              | 3              |                |
+| SEIC        | 4              | 4              | 4              | 4              | 1              |
+| SGIOY       | 2              | 1              | 4              | 2              |                |
+| SHLS        | 1              | 1              | 1              | 1              |                |
+| SHZHY       | 4              | 4              | 4              | 4              |                |
+| SKFOF       | 3              | 4              | 4              | 4              |                |
+| SNPS        | 4              | 4              | 4              | 4              |                |
+| SONVY       | 4              | 4              | 4              | 4              |                |
+| SPXCY       | 4              | 4              | 4              | 4              |                |
+| SPXSF       | 4              | 4              | 4              | 4              |                |
+| SSDOY       | 2              | 4              | 4              | 4              |                |
+| SYIEY       | 4              | 4              | 4              | 4              |                |
+| SYK         | 4              | 4              | 4              | 4              |                |
+| TCEHY       | 4              | 4              | 4              | 4              |                |
+| TGYM.MI     | 4              | 4              | 4              | 4              |                |
+| TH          | 1              | 2              | 2              | 2              | 1              |
+| TROW        | 4              | 4              | 4              | 4              | 1              |
+| TTC         | 4              | 4              | 4              | 4              |                |
+| UNICY       | 4              | 4              | 4              | 4              |                |
+| V           | 4              | 4              | 4              | 4              |                |
+| VACNY       | 4              | 4              | 4              | 4              |                |
+| VEEV        | 4              | 3              | 4              | 2              |                |
+| WCN         |                | 3              | 3              | 4              |                |
+| WDFC        | 1              | 2              | 2              | 1              |                |
+| WEGE3.SA    | 4              | 4              | 4              | 4              |                |
+| WNS         | 4              | 4              | 4              | 4              |                |
+| WST         | 4              | 4              | 4              | 4              | 1              |
+| XPEL        |                | 1              | 1              | 1              |                |
+| ZTS         | 4              | 4              | 4              | 4              | 1              |
 
 
-Based on this table CSCO (Cisco Systems) is the wide MOAT company that has financials closest to MSFT. It is true? if you look at the financials, they are really close to each other in general (capital structure, debt ...). Notice that the Cosine do not weight any financials, therefore each value has the same importance. In reality this is not true in the context of investing, one exaple is for instance than MSFT is more profitable and is more efficient in terms of expending. Further analysis might be weighting the financials according to imporance and growth, this is not done here, but this is an important exercise. If you have had this information 10 years ago and you had bought the cheper CSCO you would underperform notorously compared to MSFT. Aplhabet (GOOGL) is a good software company, as MSFT both companies have very similar financials, MSFT more profitable.
+
+Many companies with financials close to MSFT.If you look at the financials, they are really close to each other in general (capital structure, debt ...). Notice that the Cosine do not weight any individual financial values, therefore each value has the same importance. In reality this is not true in the context of investing, one example is for instance than MSFT is more profitable and is more efficient in terms of expending. Further analysis might be weighting the financials according to imporance and growth, this is not done here, but this is an important exercise. If you have had this information 10 years ago and you had bought the cheper CSCO you would underperform notorously compared to MSFT. Aplhabet (GOOGL) is a good software company, as MSFT both companies have very similar financials, MSFT more profitable.
 
 
   

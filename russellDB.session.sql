@@ -45,7 +45,7 @@ WHERE subjid in ('XPEL');
 
 
 ------------------------------ Quarterly -----------------------------------------------------
-drop table ru.qfi;
+
 CREATE TABLE ru.qfi (
     domain text,
     ficat text,
@@ -62,5 +62,44 @@ select * from ru.admo where subjid = 'MSFT'
 select * from ru.cd where aval > 0.95 or aval < -0.95
 
 select * from ru.cd where subjid = 'MSFT' and (aval < -0.9 or aval > 0.9)
+
+
+drop table ru.pr;
+
+CREATE TABLE ru.pr (
+   index TEXT, 
+   address1 TEXT, 
+   address2 TEXT, 
+   city TEXT, 
+   zip TEXT, 
+   country TEXT,
+    phone  TEXT, 
+    fax  TEXT,
+    website TEXT, 
+    industry TEXT, 
+    industryKey TEXT, 
+    industryDisp TEXT,
+    sector TEXT, 
+    sectorKey TEXT, 
+    sectorDisp TEXT, 
+    longBusinessSummary TEXT,
+    fullTimeEmployees TEXT, 
+    companyOfficers TEXT, 
+    compensationAsOfEpochDate TEXT,
+    maxAge TEXT, 
+    state TEXT, 
+    auditRisk TEXT, 
+    boardRisk TEXT, 
+    compensationRisk TEXT,
+    shareHolderRightsRisk TEXT, 
+    overallRisk TEXT, 
+    governanceEpochDate TEXT,
+    irWebsite TEXT, 
+    executiveTeam TEXT, 
+    address3 TEXT
+);
+
+
+
 
 
