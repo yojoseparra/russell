@@ -99,7 +99,61 @@ CREATE TABLE ru.pr (
     address3 TEXT
 );
 
+--------------------- EBIT > 30% ------------------------------
+select * from ru.cd where subjid in (select distinct subjid from ru.admo where fitest = 'EBIT' and fistresn > 0.30)
 
 
+-------------------------------------------------------------------------- ROI calc --------------------------------
+-- this code does not distinguish companies reporting in different currencies
+drop table ru.roi;
+create table ru.roi as 
+select a.subjid, a.fidtc, a.fiorresu, fcf, coalesce(sbc, 0) as sbc, tas, tde, tre, ((fcf - coalesce(sbc, 0))/ tas)*100  as roi 
+        from 
+        (select distinct subjid, fiorresu,fidtc::date AS fidtc from ru.admo) as a
+        left join
+        (select distinct subjid, fiorresu, fiorres/1000000 as fcf, fidtc::date AS fidtc from ru.admo where fitest = 'FreeCashFlow' ) as aa
+        on a.subjid = aa.subjid
+        and a.fidtc = aa.fidtc 
+        and a.fiorresu = aa.fiorresu
+        left join
+        (select ficat, subjid, fiorresu,fiorres/10000000 as sbc, fidtc::date AS fidtc from ru.admo where fitest = 'StockBasedCompensation' ) as b
+        on a.subjid = b.subjid
+        and a.fidtc = b.fidtc 
+        and a.fiorresu = b.fiorresu
+        left join
+        (select ficat, subjid, fiorresu,fiorres/1000000 as tas, fidtc::date AS fidtc from ru.admo where fitest = 'TotalAssets' ) as c
+        on  a.subjid = c.subjid
+        and a.fidtc = c.fidtc
+        and a.fiorresu =c.fiorresu
+        left join
+        (select ficat, subjid, fiorresu, fiorres/1000000 as tde, fidtc::date AS fidtc from ru.admo where fitest = 'TotalDebt' ) as d
+        on  a.subjid = d.subjid
+        and a.fidtc = d.fidtc
+        and a.fiorresu = d.fiorresu
+        left join
+        (select ficat, subjid, fiorresu, fiorres/1000000 as tre, fidtc::date AS fidtc from ru.admo where fitest = 'TotalRevenue' ) as e
+        on  a.subjid = e.subjid
+        and a.fidtc = e.fidtc
+        and a.fiorresu = e.fiorresu
+
+-------------------- Select a ROI > 30%
+
+select distinct 
+                subjid, fidtc, fiorresu, round(fcf) AS fcf, round(sbc) as sbc, round(tas) as tas, 
+                round(tde) as tde, round(roi) as roi, round(tre) as tre 
+from ru.roi where roi  > 15
+order by  subjid, tre, roi 
+
+
+------------------------------------------------------------------------------------------------------------------
+select subjid, avg(aval) as m  
+from ru.cd group by (dtype, param, subjid)
+having subjid in (select distinct subjid from ru.admo where fitest = 'EBIT' and fistresn > 0.30)
+
+
+SELECT * from ru.admo where subjid = 'MSFT'
+
+select subjid, fidtc, SPLIT_PART(afidtc, '_', 1) as subjid1, aval as cosine 
+from ru.cd where subjid = 'DIOD' and (aval < -0.85 or aval > 0.85)", conn);
 
 
