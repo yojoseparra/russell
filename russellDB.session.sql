@@ -104,7 +104,8 @@ select * from ru.cd where subjid in (select distinct subjid from ru.admo where f
 
 
 -------------------------------------------------------------------------- ROI calc --------------------------------
--- this code does not distinguish companies reporting in different currencies
+-- this code does not distinguish companies reporting in different currencies, it looks it s not important though
+-- BABA is quoted in CNY and USD, for this company this query makes no sense
 drop table ru.roi;
 create table ru.roi as 
 select a.subjid, a.fidtc, a.fiorresu, fcf, coalesce(sbc, 0) as sbc, tas, tde, tre, ((fcf - coalesce(sbc, 0))/ tas)*100  as roi 
@@ -116,7 +117,7 @@ select a.subjid, a.fidtc, a.fiorresu, fcf, coalesce(sbc, 0) as sbc, tas, tde, tr
         and a.fidtc = aa.fidtc 
         and a.fiorresu = aa.fiorresu
         left join
-        (select ficat, subjid, fiorresu,fiorres/10000000 as sbc, fidtc::date AS fidtc from ru.admo where fitest = 'StockBasedCompensation' ) as b
+        (select ficat, subjid, fiorresu,fiorres/1000000 as sbc, fidtc::date AS fidtc from ru.admo where fitest = 'StockBasedCompensation' ) as b
         on a.subjid = b.subjid
         and a.fidtc = b.fidtc 
         and a.fiorresu = b.fiorresu
@@ -141,8 +142,25 @@ select a.subjid, a.fidtc, a.fiorresu, fcf, coalesce(sbc, 0) as sbc, tas, tde, tr
 select distinct 
                 subjid, fidtc, fiorresu, round(fcf) AS fcf, round(sbc) as sbc, round(tas) as tas, 
                 round(tde) as tde, round(roi) as roi, round(tre) as tre 
-from ru.roi where roi  > 15
+from ru.roi where roi  > 15 
 order by  subjid, tre, roi 
+
+-------------------------------------------------------------------------- ROI/MarketCap calc --------------------------------
+
+select a.*, round(cast(mc as numeric)/1000000) as mc,  
+    CASE 
+        WHEN fcf <> 0 THEN cast(mc as numeric)   / (1000000*fcf -  coalesce(1000000*sbc, 0) ) 
+        ELSE NULL -- Or 0, or any default value you'd like
+    END as fcf_times 
+from (select * from ru.roi where fiorresu in ('USD', 'EUR', 'DKK') and fidtc > '2020-01-01') as a 
+left join (select fiorres as mc, subjid from ru.ma where fitest = 'marketCap') as b 
+on a.subjid = b.subjid
+
+
+select * from ru.admo where subjid = 'NVO' and fitest = 'FreeCashFlow'
+
+
+
 
 
 ------------------------------------------------------------------------------------------------------------------

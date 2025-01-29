@@ -629,6 +629,11 @@ Many companies with financials close to MSFT.If you look at the financials, they
 ### Filtering data on highest ROI
 
 Hereunder we present an approach to Free cash flow after controlling by stock based compensation. The reason to do this is that we believe compensating through stocks dilute the investor, thus it is a real cash expense. The problem by doing this is that we are penalizing high growth young companies that pay stock based in order to reduce employee costs. Additionally, we benefit companies with strong free cash flows, this is normally the case of already mature companies. 
+Free Cash Flow = fcf
+Stock Based Compensation = sbc
+Total Assets = tas
+Total Debt =  tde
+Total Revenue = tre
 
 Fig. 5 Table of Free Cash Flow after controlling by stock based compensation. Units in Millions
 
